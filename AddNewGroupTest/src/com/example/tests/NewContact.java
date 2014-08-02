@@ -2,7 +2,8 @@ package com.example.tests;
 
 import org.testng.annotations.Test;
 
-public class NewGroup extends BaseClass{
+public class NewContact extends BaseClass{
+
   @Test
   public void testNoneEmptyGroupCreation() throws Exception {
 	openMainPage();
@@ -26,4 +27,5 @@ public class NewGroup extends BaseClass{
     submitGroupCreation();
     gotoGroupsPage();
   }
+
 }
