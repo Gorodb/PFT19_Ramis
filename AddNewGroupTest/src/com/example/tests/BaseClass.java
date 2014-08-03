@@ -1,9 +1,7 @@
 package com.example.tests;
 
 import static org.junit.Assert.fail;
-
 import java.util.concurrent.TimeUnit;
-
 import org.openqa.selenium.Alert;
 import org.openqa.selenium.By;
 import org.openqa.selenium.NoAlertPresentException;
@@ -21,15 +19,15 @@ public class BaseClass {
 	private static String baseUrl;
 	private static boolean acceptNextAlert = true;
 	private static StringBuffer verificationErrors = new StringBuffer();
-
-	@BeforeTest
+	  
+	@BeforeClass
 	public void setUp() throws Exception {
 	    driver = new FirefoxDriver();
 	    baseUrl = "http://localhost/";
 	    driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
 	  }
 
-	@AfterTest
+	@AfterClass
 	public void tearDown() throws Exception {
 	    driver.quit();
 	    String verificationErrorString = verificationErrors.toString();
