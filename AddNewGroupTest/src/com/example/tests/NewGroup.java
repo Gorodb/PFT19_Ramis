@@ -10,7 +10,8 @@ public class NewGroup extends BaseClass{
     openGroupsPage();
     initNewGroupCreation();
     GroupData group = new GroupData();
-    group.groupName="Group 1";
+    groupSelectedData = "Group 1";
+    group.groupName=groupSelectedData;
     group.header="Header 1";
     group.footer="Footer 1";
 	fillNewGroupForm(group);
