@@ -29,12 +29,28 @@ public class ContactHelper extends HelperBase {
 		type(By.name("email"), contactInfoData.contactEmail1);
 		type(By.name("email2"), contactInfoData.contactEmail2);
 		selectByText(By.name("bday"), contactInfoData.contactBday);
-		new Select(driver.findElement(By.name("bmonth"))).selectByVisibleText(contactInfoData.contactBmonth);
+		selectByText(By.name("bmonth"), contactInfoData.contactBmonth);
 		type(By.name("byear"), contactInfoData.contactByear);
-		new Select(driver.findElement(By.name("new_group"))).selectByVisibleText(contactInfoData.selectGroup);
+		selectByText(By.name("new_group"), contactInfoData.selectGroup); //to modify
 		type(By.name("address2"), contactInfoData.contactSecondaryAdress);
 		type(By.name("phone2"), contactInfoData.contactSecondaryPhone);
 	}
 
+	private void clickEditContact(int index) {
+		click(By.xpath("//table[@id='maintable']//tr[" + (index+1) + "]//a/img[@title='Edit']"));
+	}
+
+	public void applyContactModification() {
+		click(By.xpath("//input[@value = 'Update']"));
+	}
+	
+	public void deleteContact(int index) {
+		clickEditContact(index);
+		click(By.xpath("//input[@value = 'Delete']"));
+	}
+
+	public void openContactPage(int index) {
+		clickEditContact(index);
+	}
 
 }
