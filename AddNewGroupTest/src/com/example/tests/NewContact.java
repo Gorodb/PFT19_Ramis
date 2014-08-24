@@ -6,8 +6,8 @@ public class NewContact extends BaseClass{
 
   @Test
   public void testNewUserCreation() throws Exception {
-	openMainPage();
-	addNewUserClick();
+	app.getNavigationHelper().openMainPage();
+	app.getContactHelper().addNewUserClick();
 	
 	ContactData contactInfoData = new ContactData();
 	contactInfoData.contactName = "Tester";
@@ -24,10 +24,36 @@ public class NewContact extends BaseClass{
 	contactInfoData.selectGroup = groupSelectedData;
 	contactInfoData.contactSecondaryAdress = "Secondary adress for testing this textarea field";
 	contactInfoData.contactSecondaryPhone = "Sweet dear home!";
-	contacstInfo(contactInfoData);
+	app.getContactHelper().contacstInfo(contactInfoData);
 	
-	createNewContact(); 
-	gotoHomePage();
+	app.getContactHelper().createNewContact(); 
+	app.getNavigationHelper().openMainPage();
+  }
+  
+  @Test
+  public void testNewEmptyUserCreation() throws Exception {
+	app.getNavigationHelper().openMainPage();
+	app.getContactHelper().addNewUserClick();
+	
+	ContactData contactInfoData = new ContactData();
+	contactInfoData.contactName = "";
+	contactInfoData.secondName = "";
+	contactInfoData.contactAdress = "";
+	contactInfoData.contactHomePhone = "";
+	contactInfoData.contactMobilePhone = "";
+	contactInfoData.contactWorkPhone = "";
+	contactInfoData.contactEmail1 = "";
+	contactInfoData.contactEmail2 = "";
+	contactInfoData.contactBday = "-";
+	contactInfoData.contactBmonth = "-";
+	contactInfoData.contactByear = "";
+	contactInfoData.selectGroup = "[none]";
+	contactInfoData.contactSecondaryAdress = "";
+	contactInfoData.contactSecondaryPhone = "";
+	app.getContactHelper().contacstInfo(contactInfoData);
+	
+	app.getContactHelper().createNewContact(); 
+	app.getNavigationHelper().openMainPage();
   }
 
 }

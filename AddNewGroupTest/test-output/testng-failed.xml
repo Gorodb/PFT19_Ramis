@@ -5,9 +5,9 @@
     <classes>
       <class name="com.example.tests.NewContact">
         <methods>
-          <include name="tearDown"/>
-          <include name="testNewUserCreation"/>
           <include name="setUp"/>
+          <include name="testNewUserCreation"/>
+          <include name="tearDown"/>
         </methods>
       </class> <!-- com.example.tests.NewContact -->
     </classes>
