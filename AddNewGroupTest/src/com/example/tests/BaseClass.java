@@ -8,7 +8,7 @@ public class BaseClass {
 	
 	protected static String groupSelectedData;
 	
-	protected ApplicationManager app;
+	protected static ApplicationManager app;
 	
 	@BeforeTest
 	public void setUp() throws Exception {

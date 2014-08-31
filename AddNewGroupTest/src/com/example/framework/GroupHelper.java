@@ -1,6 +1,11 @@
 package com.example.framework;
 
+import java.util.ArrayList;
+import java.util.Iterator;
+import java.util.List;
+
 import org.openqa.selenium.By;
+import org.openqa.selenium.WebElement;
 
 import com.example.tests.GroupData;
 
@@ -29,7 +34,7 @@ public class GroupHelper extends HelperBase {
 	}
 
 	private void selectGroupByIndex(int index) {
-		click(By.xpath("//input[@name='selected[]']["+ index +"]"));
+		click(By.xpath("//input[@name='selected[]']["+ (index+1) +"]"));
 	}
 
 	public void deleteGroup(int index) {
@@ -45,6 +50,19 @@ public class GroupHelper extends HelperBase {
 
 	public void submitGroupModification() {
 		click(By.name("update"));
+	}
+
+	public List<GroupData> getGroups() {
+		List<GroupData> groups = new ArrayList<GroupData>();
+		List<WebElement> checkboxes = driver.findElements(By.name("selected[]"));
+		for (WebElement checkbox : checkboxes) {
+			GroupData group = new GroupData();
+			String title = checkbox.getAttribute("title");
+			title = title.substring("select (".length(), title.length() - ")".length());
+			group.groupName = title;
+			groups.add(group);
+		}
+		return groups;
 	}
 	
 }
