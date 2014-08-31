@@ -1,14 +1,22 @@
 package com.example.tests;
 
+import java.util.Collections;
+import java.util.List;
+
 import org.testng.annotations.Test;
+import static org.testng.Assert.assertEquals;
 
 public class NewContact extends BaseClass{
 
   @Test
   public void testNewUserCreation() throws Exception {
 	app.getNavigationHelper().openMainPage();
-	app.getContactHelper().addNewUserClick();
 	
+	//get contacts
+	List<ContactData> oldContactsList = app.getContactHelper().getContacts();
+	
+	//action
+	app.getContactHelper().addNewUserClick();
 	ContactData contactInfoData = new ContactData();
 	contactInfoData.contactName = "Tester";
 	contactInfoData.secondName = "Testerow";
@@ -28,11 +36,24 @@ public class NewContact extends BaseClass{
 	
 	app.getContactHelper().createNewContact(); 
 	app.getNavigationHelper().openMainPage();
+	
+	//save new contacts at list
+	List<ContactData> newContactsList = app.getContactHelper().getContacts();
+	
+	//asserts
+	oldContactsList.add(contactInfoData);
+	Collections.sort(oldContactsList);
+	assertEquals(oldContactsList, newContactsList);
   }
   
   @Test
   public void testNewEmptyUserCreation() throws Exception {
 	app.getNavigationHelper().openMainPage();
+	
+	//get contacts
+	List<ContactData> oldContactsList = app.getContactHelper().getContacts();
+	
+	//action
 	app.getContactHelper().addNewUserClick();
 	
 	ContactData contactInfoData = new ContactData();
@@ -54,6 +75,14 @@ public class NewContact extends BaseClass{
 	
 	app.getContactHelper().createNewContact(); 
 	app.getNavigationHelper().openMainPage();
+	
+	//save new contacts at list
+	List<ContactData> newContactsList = app.getContactHelper().getContacts();
+	
+	//asserts
+	oldContactsList.add(contactInfoData);
+	Collections.sort(oldContactsList);
+	assertEquals(oldContactsList, newContactsList);
   }
 
 }
