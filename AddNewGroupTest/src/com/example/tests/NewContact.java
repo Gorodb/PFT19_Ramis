@@ -3,13 +3,13 @@ package com.example.tests;
 import java.util.Collections;
 import java.util.List;
 
-import org.testng.annotations.Test;
 import static org.testng.Assert.assertEquals;
+import org.testng.annotations.Test;
 
 public class NewContact extends BaseClass{
 
-  @Test
-  public void testNewUserCreation() throws Exception {
+  @Test(dataProvider = "randomValidContactGenerator")
+  public void testNewUserCreation(ContactData contactInfoData) throws Exception {
 	app.getNavigationHelper().openMainPage();
 	
 	//get contacts
@@ -17,21 +17,21 @@ public class NewContact extends BaseClass{
 	
 	//action
 	app.getContactHelper().addNewUserClick();
-	ContactData contactInfoData = new ContactData();
-	contactInfoData.contactName = "Tester";
-	contactInfoData.secondName = "Testerow";
-	contactInfoData.contactAdress = "Testing city, tests street 18";
-	contactInfoData.contactHomePhone = "8 (8422) 555555";
-	contactInfoData.contactMobilePhone = "+7 955 5555555";
-	contactInfoData.contactWorkPhone = "8 (8422) 999999";
-	contactInfoData.contactEmail1 = "test-mail@gmail.com";
-	contactInfoData.contactEmail2 = "test-e-mail@testdomen.com";
-	contactInfoData.contactBday = "15";
-	contactInfoData.contactBmonth = "November";
-	contactInfoData.contactByear = "1988";
-	contactInfoData.selectGroup = groupSelectedData;
-	contactInfoData.contactSecondaryAdress = "Secondary adress for testing this textarea field";
-	contactInfoData.contactSecondaryPhone = "Sweet dear home!";
+//	ContactData contactInfoData = new ContactData();
+//	contactInfoData.contactName = "Tester";
+//	contactInfoData.secondName = "Testerow";
+//	contactInfoData.contactAdress = "Testing city, tests street 18";
+//	contactInfoData.contactHomePhone = "8 (8422) 555555";
+//	contactInfoData.contactMobilePhone = "+7 955 5555555";
+//	contactInfoData.contactWorkPhone = "8 (8422) 999999";
+//	contactInfoData.contactEmail1 = "test-mail@gmail.com";
+//	contactInfoData.contactEmail2 = "test-e-mail@testdomen.com";
+//	contactInfoData.contactBday = "15";
+//	contactInfoData.contactBmonth = "November";
+//	contactInfoData.contactByear = "1988";
+//	contactInfoData.selectGroup = groupSelectedData;
+//	contactInfoData.contactSecondaryAdress = "Secondary adress for testing this textarea field";
+//	contactInfoData.contactSecondaryPhone = "Sweet dear home!";
 	app.getContactHelper().contacstInfo(contactInfoData);
 	
 	app.getContactHelper().createNewContact(); 
@@ -43,10 +43,11 @@ public class NewContact extends BaseClass{
 	//asserts
 	oldContactsList.add(contactInfoData);
 	Collections.sort(oldContactsList);
-	assertEquals(oldContactsList, newContactsList);
+	Collections.sort(newContactsList);
+	assertEquals(newContactsList, oldContactsList);
   }
   
-  @Test
+  //@Test
   public void testNewEmptyUserCreation() throws Exception {
 	app.getNavigationHelper().openMainPage();
 	

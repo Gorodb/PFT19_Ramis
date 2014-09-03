@@ -18,11 +18,6 @@ public class GroupData implements Comparable<GroupData> {
 	}
 	
 	@Override
-	public String toString() {
-		return "GroupData [groupName=" + groupName + "]";
-	}
-	
-	@Override
 	public int hashCode() {
 		final int prime = 31;
 		int result = 1;
@@ -30,6 +25,11 @@ public class GroupData implements Comparable<GroupData> {
 		return result;
 	}
 	
+	@Override
+	public String toString() {
+		return "GroupData [groupName=" + groupName + ", header=" + header
+				+ ", footer=" + footer + "]";
+	}
 	@Override
 	public boolean equals(Object obj) {
 		if (this == obj)
