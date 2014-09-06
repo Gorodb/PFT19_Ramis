@@ -4,6 +4,7 @@ import static org.testng.Assert.assertEquals;
 
 import java.util.Collections;
 import java.util.List;
+import java.util.Random;
 
 import org.testng.annotations.Test;
 
@@ -16,8 +17,11 @@ public class ContactRemovalTest extends BaseClass {
 		//get contacts
 		List<ContactData> oldContactsList = app.getContactHelper().getContacts();
 		
+		Random rnd = new Random();
+	    int index = rnd.nextInt(oldContactsList.size()-1);
+		
 		//action
-		app.getContactHelper().deleteContact(0);
+		app.getContactHelper().deleteContact(index);
 		app.getNavigationHelper().gotoHomePage();
 		
 		//save new contacts at list

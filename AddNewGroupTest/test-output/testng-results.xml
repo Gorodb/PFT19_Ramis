@@ -2,28 +2,28 @@
 <testng-results skipped="0" failed="1" total="1" passed="0">
   <reporter-output>
   </reporter-output>
-  <suite name="Default suite" duration-ms="10149" started-at="2014-09-02T16:31:07Z" finished-at="2014-09-02T16:31:17Z">
+  <suite name="Default suite" duration-ms="8121" started-at="2014-09-06T14:18:22Z" finished-at="2014-09-06T14:18:30Z">
     <groups>
     </groups>
-    <test name="Default test" duration-ms="10149" started-at="2014-09-02T16:31:07Z" finished-at="2014-09-02T16:31:17Z">
-      <class name="com.example.tests.NewContact">
-        <test-method status="PASS" signature="setUp()[pri:0, instance:com.example.tests.NewContact@65067a13]" name="setUp" is-config="true" duration-ms="5473" started-at="2014-09-02T20:31:07Z" finished-at="2014-09-02T20:31:13Z">
+    <test name="Default test" duration-ms="8121" started-at="2014-09-06T14:18:22Z" finished-at="2014-09-06T14:18:30Z">
+      <class name="com.example.tests.ContactModification">
+        <test-method status="PASS" signature="setUp()[pri:0, instance:com.example.tests.ContactModification@6c977c1f]" name="setUp" is-config="true" duration-ms="4855" started-at="2014-09-06T18:18:22Z" finished-at="2014-09-06T18:18:27Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setUp -->
-        <test-method status="FAIL" signature="testNewUserCreation()[pri:0, instance:com.example.tests.NewContact@65067a13]" name="testNewUserCreation" duration-ms="4448" started-at="2014-09-02T20:31:13Z" finished-at="2014-09-02T20:31:17Z">
+        <test-method status="FAIL" signature="deleteSomeContact()[pri:0, instance:com.example.tests.ContactModification@6c977c1f]" name="deleteSomeContact" duration-ms="3032" started-at="2014-09-06T18:18:27Z" finished-at="2014-09-06T18:18:30Z">
           <exception class="java.lang.AssertionError">
             <message>
-              <![CDATA[Lists differ at element [0]: ContactData [contactName=Tester, secondName=Testerow] != ContactData [contactName=Umma1115541424, secondName=Mila-1417249823] expected [ContactData [contactName=Tester, secondName=Testerow]] but found [ContactData [contactName=Umma1115541424, secondName=Mila-1417249823]]]]>
+              <![CDATA[Lists differ at element [1]: ContactData [contactName=Djohn, secondName=Lenon] != ContactData [contactName=Umma1994256979, secondName=Mila-1710073945] expected [ContactData [contactName=Djohn, secondName=Lenon]] but found [ContactData [contactName=Umma1994256979, secondName=Mila-1710073945]]]]>
             </message>
             <full-stacktrace>
-              <![CDATA[java.lang.AssertionError: Lists differ at element [0]: ContactData [contactName=Tester, secondName=Testerow] != ContactData [contactName=Umma1115541424, secondName=Mila-1417249823] expected [ContactData [contactName=Tester, secondName=Testerow]] but found [ContactData [contactName=Umma1115541424, secondName=Mila-1417249823]]
+              <![CDATA[java.lang.AssertionError: Lists differ at element [1]: ContactData [contactName=Djohn, secondName=Lenon] != ContactData [contactName=Umma1994256979, secondName=Mila-1710073945] expected [ContactData [contactName=Djohn, secondName=Lenon]] but found [ContactData [contactName=Umma1994256979, secondName=Mila-1710073945]]
 	at org.testng.Assert.fail(Assert.java:94)
 	at org.testng.Assert.failNotEquals(Assert.java:494)
 	at org.testng.Assert.assertEquals(Assert.java:123)
 	at org.testng.Assert.assertEquals(Assert.java:549)
 	at org.testng.Assert.assertEquals(Assert.java:514)
-	at com.example.tests.NewContact.testNewUserCreation(NewContact.java:46)
+	at com.example.tests.ContactModification.deleteSomeContact(ContactModification.java:39)
 	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
 	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
@@ -53,12 +53,12 @@
           </exception> <!-- java.lang.AssertionError -->
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- testNewUserCreation -->
-        <test-method status="PASS" signature="tearDown()[pri:0, instance:com.example.tests.NewContact@65067a13]" name="tearDown" is-config="true" duration-ms="215" started-at="2014-09-02T20:31:17Z" finished-at="2014-09-02T20:31:17Z">
+        </test-method> <!-- deleteSomeContact -->
+        <test-method status="PASS" signature="tearDown()[pri:0, instance:com.example.tests.ContactModification@6c977c1f]" name="tearDown" is-config="true" duration-ms="219" started-at="2014-09-06T18:18:30Z" finished-at="2014-09-06T18:18:30Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDown -->
-      </class> <!-- com.example.tests.NewContact -->
+      </class> <!-- com.example.tests.ContactModification -->
     </test> <!-- Default test -->
   </suite> <!-- Default suite -->
 </testng-results>
