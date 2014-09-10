@@ -1,20 +1,20 @@
 package com.example.tests;
 
 public class ContactData implements Comparable<ContactData> {
-	public String contactName;
-	public String secondName;
-	public String contactAdress;
-	public String contactHomePhone;
-	public String contactMobilePhone;
-	public String contactWorkPhone;
-	public String contactEmail1;
-	public String contactEmail2;
-	public String contactBday;
-	public String contactBmonth;
-	public String contactByear;
-	public String selectGroup;
-	public String contactSecondaryAdress;
-	public String contactSecondaryPhone;
+	private String contactName;
+	private String secondName;
+	private String contactAdress;
+	private String contactHomePhone;
+	private String contactMobilePhone;
+	private String contactWorkPhone;
+	private String contactEmail1;
+	private String contactEmail2;
+	private String contactBday;
+	private String contactBmonth;
+	private String contactByear;
+	private String selectGroup;
+	private String contactSecondaryAdress;
+	private String contactSecondaryPhone;
 
 	public ContactData() {
 		this.contactName = contactName;
@@ -31,6 +31,49 @@ public class ContactData implements Comparable<ContactData> {
 		this.selectGroup = selectGroup;
 		this.contactSecondaryAdress = contactSecondaryAdress;
 		this.contactSecondaryPhone = contactSecondaryPhone;
+	}
+	
+	public String getContactName() {
+		return contactName;
+	}
+	public String getSecondName() {
+		return secondName;
+	}
+	public String getContactAdress() {
+		return contactAdress;
+	}
+	public String getContactHomePhone() {
+		return contactHomePhone;
+	}
+	public String getContactMobilePhone() {
+		return contactMobilePhone;
+	}
+	public String getContactWorkPhone() {
+		return contactWorkPhone;
+	}
+	public String getContactEmail1() {
+		return contactEmail1;
+	}
+	public String getContactEmail2() {
+		return contactEmail2;
+	}
+	public String getContactBday() {
+		return contactBday;
+	}
+	public String getContactBmonth() {
+		return contactBmonth;
+	}
+	public String getContactByear() {
+		return contactByear;
+	}
+	public String getSelectGroup() {
+		return selectGroup;
+	}
+	public String getContactSecondaryAdress() {
+		return contactSecondaryAdress;
+	}
+	public String getContactSecondaryPhone() {
+		return contactSecondaryPhone;
 	}
 	
 	@Override
@@ -73,6 +116,71 @@ public class ContactData implements Comparable<ContactData> {
 	@Override
 	public int compareTo(ContactData other) {
 		return this.contactName.toLowerCase().compareTo(other.contactName.toLowerCase());
+	}
+
+	public ContactData withContactName(String name) {
+		contactName = name;
+		return this;
+	}
+
+	public ContactData withSecondName(String secondName) {
+		this.secondName = secondName;
+		return this;
+	}
+
+	public ContactData withContactAdress(String contactAdress) {
+		this.contactAdress = contactAdress;
+		return this;
+	}
+
+	public ContactData withContactHomePhone(String contactHomePhone) {
+		this.contactHomePhone = contactHomePhone;
+		return this;
+	}
+
+	public ContactData withContactMobilePhone(String contactMobilePhone) {
+		this.contactMobilePhone = contactMobilePhone;
+		return this;
+	}
+
+	public ContactData withContactWorkPhone(String contactWorkPhone) {
+		this.contactWorkPhone = contactWorkPhone;
+		return this;
+	}
+
+	public ContactData withContactEmail1(String contactEmail1) {
+		this.contactEmail1 = contactEmail1;
+		return this;
+	}
+
+	public ContactData withContactEmail2(String contactEmail2) {
+		this.contactEmail2 = contactEmail2;
+		return this;
+	}
+
+	public ContactData withContactBday(String contactBday) {
+		this.contactBday = contactBday;
+		return this;
+	}
+
+	public ContactData withContactBmonth(String contactBmonth) {
+		this.contactBmonth = contactBmonth;
+		return this;
+	}
+
+	public ContactData withContactByear(String contactByear) {
+		this.contactByear = contactByear;
+		return this;
+	}
+
+	public ContactData withContactSecondaryAdress(String contactSecondaryAdress) {
+		this.contactSecondaryAdress = contactSecondaryAdress;
+		return this;
+	}
+
+	public ContactData withContactSecondaryPhone(String contactSecondaryPhone) {
+		this.contactSecondaryPhone = contactSecondaryPhone;
+		return this;
 	}
 	
 }

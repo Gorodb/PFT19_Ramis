@@ -1,19 +1,16 @@
 package com.example.tests;
 
 import static org.testng.Assert.assertEquals;
-
 import java.util.Collections;
 import java.util.List;
 import java.util.Random;
-
 import org.testng.annotations.Test;
+import static com.example.framework.ContactHelper.MODIFICATION;
 
 public class ContactModification extends BaseClass {
 	
 	@Test
-	public void deleteSomeContact() {
-		app.getNavigationHelper().openMainPage();
-		
+	public void modifySomeContact(ContactData contact) {
 		//get contacts
 		List<ContactData> oldContactsList = app.getContactHelper().getContacts();
 
@@ -21,13 +18,7 @@ public class ContactModification extends BaseClass {
 	    int index = rnd.nextInt(oldContactsList.size()-1);
 	    
 		//action
-		app.getContactHelper().openContactPage(index);
-		ContactData contact = new ContactData();
-		contact.contactName = "Djohn";
-		contact.secondName = "Lenon";
-		app.getContactHelper().contacstInfo(contact);
-		app.getContactHelper().applyContactModification();
-		app.getNavigationHelper().gotoHomePage();
+	    app.getContactHelper().modifyContact(index, contact);
 		
 		//save new contacts at list
 		List<ContactData> newContactsList = app.getContactHelper().getContacts();

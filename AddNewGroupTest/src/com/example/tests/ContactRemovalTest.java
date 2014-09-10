@@ -12,8 +12,6 @@ public class ContactRemovalTest extends BaseClass {
 
 	@Test
 	public void deleteSomeContact() {
-		app.getNavigationHelper().openMainPage();
-		
 		//get contacts
 		List<ContactData> oldContactsList = app.getContactHelper().getContacts();
 		
@@ -22,7 +20,6 @@ public class ContactRemovalTest extends BaseClass {
 		
 		//action
 		app.getContactHelper().deleteContact(index);
-		app.getNavigationHelper().gotoHomePage();
 		
 		//save new contacts at list
 		List<ContactData> newContactsList = app.getContactHelper().getContacts();

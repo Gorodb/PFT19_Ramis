@@ -48,7 +48,7 @@
               <ul>
                 <li>
                   <a href="#" class="navigator-link " panel-name="test-xml-Default_suite">
-                    <span>C:\Users\Рамис\AppData\Local\Temp\testng-eclipse-1528284370\testng-customsuite.xml</span>
+                    <span>C:\Users\Рамис\AppData\Local\Temp\testng-eclipse-121241842\testng-customsuite.xml</span>
                   </a> <!-- navigator-link  -->
                 </li>
                 <li>
@@ -101,7 +101,7 @@
                     <div class="method-list-content failed suite-Default_suite">
                       <span>
                         <img width="3%" src="failed.png"/>
-                        <a href="#" class="method navigator-link" panel-name="suite-Default_suite" title="com.example.tests.ContactModification" hash-for-method="deleteSomeContact">deleteSomeContact</a> <!-- method navigator-link -->
+                        <a href="#" class="method navigator-link" panel-name="suite-Default_suite" title="com.example.tests.NewContact" hash-for-method="testNewUserCreation(ContactData [contactName=Umma1953583087, secondName=Mila526500757])">testNewUserCreation(ContactData [contactName=Umma1953583087, secondName=Mila526500757])</a> <!-- method navigator-link -->
                       </span>
                       <br/>
                     </div> <!-- method-list-content failed suite-Default_suite -->
@@ -119,21 +119,22 @@
           <div class="suite-Default_suite-class-failed">
             <div class="main-panel-header rounded-window-top">
               <img src="failed.png"/>
-              <span class="class-name">com.example.tests.ContactModification</span>
+              <span class="class-name">com.example.tests.NewContact</span>
             </div> <!-- main-panel-header rounded-window-top -->
             <div class="main-panel-content rounded-window-bottom">
               <div class="method">
                 <div class="method-content">
-                  <a name="deleteSomeContact">
-                  </a> <!-- deleteSomeContact -->
-                  <span class="method-name">deleteSomeContact</span>
-                  <div class="stack-trace">java.lang.AssertionError: Lists differ at element [1]: ContactData [contactName=Djohn, secondName=Lenon] != ContactData [contactName=Umma1994256979, secondName=Mila-1710073945] expected [ContactData [contactName=Djohn, secondName=Lenon]] but found [ContactData [contactName=Umma1994256979, secondName=Mila-1710073945]]
+                  <a name="testNewUserCreation(ContactData [contactName=Umma1953583087, secondName=Mila526500757])">
+                  </a> <!-- testNewUserCreation(ContactData [contactName=Umma1953583087, secondName=Mila526500757]) -->
+                  <span class="method-name">testNewUserCreation</span>
+                  <span class="parameters">(ContactData [contactName=Umma1953583087, secondName=Mila526500757])</span>
+                  <div class="stack-trace">java.lang.AssertionError: Lists differ at element [9]: ContactData [contactName=Umma1953583087, secondName=Mila526500757] != ContactData [contactName=Djohn, secondName=Lenon] expected [ContactData [contactName=Umma1953583087, secondName=Mila526500757]] but found [ContactData [contactName=Djohn, secondName=Lenon]]
 	at org.testng.Assert.fail(Assert.java:94)
 	at org.testng.Assert.failNotEquals(Assert.java:494)
 	at org.testng.Assert.assertEquals(Assert.java:123)
 	at org.testng.Assert.assertEquals(Assert.java:549)
 	at org.testng.Assert.assertEquals(Assert.java:514)
-	at com.example.tests.ContactModification.deleteSomeContact(ContactModification.java:39)
+	at com.example.tests.NewContact.testNewUserCreation(NewContact.java:27)
 	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
 	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
@@ -167,7 +168,7 @@
         </div> <!-- panel Default_suite -->
         <div panel-name="test-xml-Default_suite" class="panel">
           <div class="main-panel-header rounded-window-top">
-            <span class="header-content">C:\Users\Рамис\AppData\Local\Temp\testng-eclipse-1528284370\testng-customsuite.xml</span>
+            <span class="header-content">C:\Users\Рамис\AppData\Local\Temp\testng-eclipse-121241842\testng-customsuite.xml</span>
           </div> <!-- main-panel-header rounded-window-top -->
           <div class="main-panel-content rounded-window-bottom">
             <pre>
@@ -176,7 +177,7 @@
 &lt;suite name=&quot;Default suite&quot;&gt;
   &lt;test verbose=&quot;2&quot; name=&quot;Default test&quot;&gt;
     &lt;classes&gt;
-      &lt;class name=&quot;com.example.tests.ContactModification&quot;/&gt;
+      &lt;class name=&quot;com.example.tests.NewContact&quot;/&gt;
     &lt;/classes&gt;
   &lt;/test&gt; &lt;!-- Default test --&gt;
 &lt;/suite&gt; &lt;!-- Default suite --&gt;
@@ -218,14 +219,14 @@ data.addColumn('string', 'Class');
 data.addColumn('number', 'Time (ms)');
 data.addRows(1);
 data.setCell(0, 0, 0)
-data.setCell(0, 1, 'deleteSomeContact')
-data.setCell(0, 2, 'com.example.tests.ContactModification')
-data.setCell(0, 3, 3032);
+data.setCell(0, 1, 'testNewUserCreation')
+data.setCell(0, 2, 'com.example.tests.NewContact')
+data.setCell(0, 3, 4352);
 window.suiteTableData['Default_suite']= { tableData: data, tableDiv: 'times-div-Default_suite'}
 return data;
 }
               </script>
-              <span class="suite-total-time">Total running time: 3 seconds</span>
+              <span class="suite-total-time">Total running time: 4 seconds</span>
               <div id="times-div-Default_suite">
               </div> <!-- times-div-Default_suite -->
             </div> <!-- times-div -->
@@ -251,7 +252,7 @@ return data;
           </div> <!-- main-panel-header rounded-window-top -->
           <div class="main-panel-content rounded-window-bottom">
             <div class="chronological-class">
-              <div class="chronological-class-name">com.example.tests.ContactModification</div> <!-- chronological-class-name -->
+              <div class="chronological-class-name">com.example.tests.NewContact</div> <!-- chronological-class-name -->
               <div class="configuration-test before">
                 <span class="method-name">setUp</span>
                 <span class="method-start">0 ms</span>
@@ -259,12 +260,12 @@ return data;
               <div class="test-method">
                 <img src="failed.png">
                 </img>
-                <span class="method-name">deleteSomeContact</span>
-                <span class="method-start">4870 ms</span>
+                <span class="method-name">testNewUserCreation(ContactData [contactName=Umma1953583087, secondName=Mila526500757])</span>
+                <span class="method-start">7002 ms</span>
               </div> <!-- test-method -->
               <div class="configuration-test after">
                 <span class="method-name">tearDown</span>
-                <span class="method-start">7902 ms</span>
+                <span class="method-start">11359 ms</span>
               </div> <!-- configuration-test after -->
           </div> <!-- main-panel-content rounded-window-bottom -->
         </div> <!-- panel -->

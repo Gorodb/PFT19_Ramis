@@ -1,5 +1,7 @@
 package com.example.framework;
 
+import javax.print.DocFlavor.BYTE_ARRAY;
+
 import org.openqa.selenium.By;
 
 public class NavigationHelper extends HelperBase {
@@ -8,16 +10,29 @@ public class NavigationHelper extends HelperBase {
 		super(manager);
 	}
 
-	public void openMainPage() {
-		driver.get(manager.baseUrl + "/addressbookv4.1.4/");
+	public void mainPage() {
+		if (!onMainPage()) {
+			click(By.linkText("home"));
+		}
 	}
 
-	public void openGroupsPage() {
-		click(By.linkText("groups"));
+	private boolean onMainPage() {
+		return driver.findElements(By.id("maintable")).size() > 0;
 	}
 
-	public void gotoGroupsPage() {
-		click(By.linkText("group page"));
+	public void groupsPage() {
+		if (!onGroupsPage()) {
+			click(By.linkText("groups"));
+		}
+	}
+
+	private boolean onGroupsPage() {
+		if (driver.getCurrentUrl().contains("/group.php") 
+				&& driver.findElements(By.name("new")).size() > 0) {
+			return true;
+		} else {
+			return false;
+		}
 	}
 
 	public void gotoHomePage() {

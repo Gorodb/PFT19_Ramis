@@ -2,40 +2,20 @@ package com.example.tests;
 
 import java.util.Collections;
 import java.util.List;
-
+import static com.example.framework.ContactHelper.CREATION;
 import static org.testng.Assert.assertEquals;
+import org.testng.annotations.BeforeClass;
 import org.testng.annotations.Test;
 
 public class NewContact extends BaseClass{
 
   @Test(dataProvider = "randomValidContactGenerator")
   public void testNewUserCreation(ContactData contactInfoData) throws Exception {
-	app.getNavigationHelper().openMainPage();
-	
 	//get contacts
 	List<ContactData> oldContactsList = app.getContactHelper().getContacts();
 	
 	//action
-	app.getContactHelper().addNewUserClick();
-//	ContactData contactInfoData = new ContactData();
-//	contactInfoData.contactName = "Tester";
-//	contactInfoData.secondName = "Testerow";
-//	contactInfoData.contactAdress = "Testing city, tests street 18";
-//	contactInfoData.contactHomePhone = "8 (8422) 555555";
-//	contactInfoData.contactMobilePhone = "+7 955 5555555";
-//	contactInfoData.contactWorkPhone = "8 (8422) 999999";
-//	contactInfoData.contactEmail1 = "test-mail@gmail.com";
-//	contactInfoData.contactEmail2 = "test-e-mail@testdomen.com";
-//	contactInfoData.contactBday = "15";
-//	contactInfoData.contactBmonth = "November";
-//	contactInfoData.contactByear = "1988";
-//	contactInfoData.selectGroup = groupSelectedData;
-//	contactInfoData.contactSecondaryAdress = "Secondary adress for testing this textarea field";
-//	contactInfoData.contactSecondaryPhone = "Sweet dear home!";
-	app.getContactHelper().contacstInfo(contactInfoData);
-	
-	app.getContactHelper().createNewContact(); 
-	app.getNavigationHelper().openMainPage();
+	app.getContactHelper().createContact(contactInfoData);
 	
 	//save new contacts at list
 	List<ContactData> newContactsList = app.getContactHelper().getContacts();
@@ -45,45 +25,6 @@ public class NewContact extends BaseClass{
 	Collections.sort(oldContactsList);
 	Collections.sort(newContactsList);
 	assertEquals(newContactsList, oldContactsList);
-  }
-  
-  //@Test
-  public void testNewEmptyUserCreation() throws Exception {
-	app.getNavigationHelper().openMainPage();
-	
-	//get contacts
-	List<ContactData> oldContactsList = app.getContactHelper().getContacts();
-	
-	//action
-	app.getContactHelper().addNewUserClick();
-	
-	ContactData contactInfoData = new ContactData();
-	contactInfoData.contactName = "";
-	contactInfoData.secondName = "";
-	contactInfoData.contactAdress = "";
-	contactInfoData.contactHomePhone = "";
-	contactInfoData.contactMobilePhone = "";
-	contactInfoData.contactWorkPhone = "";
-	contactInfoData.contactEmail1 = "";
-	contactInfoData.contactEmail2 = "";
-	contactInfoData.contactBday = "-";
-	contactInfoData.contactBmonth = "-";
-	contactInfoData.contactByear = "";
-	contactInfoData.selectGroup = "[none]";
-	contactInfoData.contactSecondaryAdress = "";
-	contactInfoData.contactSecondaryPhone = "";
-	app.getContactHelper().contacstInfo(contactInfoData);
-	
-	app.getContactHelper().createNewContact(); 
-	app.getNavigationHelper().openMainPage();
-	
-	//save new contacts at list
-	List<ContactData> newContactsList = app.getContactHelper().getContacts();
-	
-	//asserts
-	oldContactsList.add(contactInfoData);
-	Collections.sort(oldContactsList);
-	assertEquals(oldContactsList, newContactsList);
   }
 
 }

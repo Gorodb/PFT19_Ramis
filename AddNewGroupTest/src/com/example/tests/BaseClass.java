@@ -35,10 +35,13 @@ public class BaseClass {
 	public Iterator<Object[]> randomValidGroupGenerator() {
 		List<Object[]> list = new ArrayList<Object[]>();
 		for (int i=0; i<5; i++) {
-			GroupData group = new GroupData();
-			group.groupName=generateRandomString("Umma ");
-			group.header=generateRandomString("Mila ");
-			group.footer=generateRandomString("Angelina ");
+			GroupData group = new GroupData()
+				.withName(generateRandomString("Umma "))
+				.withHeader(generateRandomString("Mila "))
+				.wuthFooter(generateRandomString("Angelina "));
+			//group.groupName=generateRandomString("Umma ");
+			//group.header=generateRandomString("Mila ");
+			//group.footer=generateRandomString("Angelina ");
 			list.add(new Object[]{group});
 		}
 		return list.iterator();
@@ -61,20 +64,20 @@ public class BaseClass {
 	public Iterator<Object[]> randomValidContactGenerator() {
 		List<Object[]> list = new ArrayList<Object[]>();
 		for (int i=0; i<1; i++) {
-			ContactData contact = new ContactData();
-			contact.contactName=generateRandomContactString("Umma", 0);
-			contact.secondName=generateRandomContactString("Mila", 0);
-			contact.contactAdress=generateRandomContactString("Angelina ", 0);
-			contact.contactHomePhone=generateRandomContactString("8 (8422) ", 1);
-			contact.contactMobilePhone=generateRandomContactString("Angelina ", 2);
-			contact.contactWorkPhone=generateRandomContactString("8 (8422) ", 1);
-			contact.contactEmail1=generateRandomContactString("AngelinasMail", 3);
-			contact.contactEmail2=generateRandomContactString("MilasMail", 3);
-			contact.contactBday="4";//generateRandomContactString("", 4);
-			contact.contactBmonth="July"; //generateRandomContactString("July", 5);
-			contact.contactByear=generateRandomContactString("", 6);
-			contact.contactSecondaryAdress=generateRandomContactString("Angelina ", 0);
-			contact.contactSecondaryPhone=generateRandomContactString("8 (8422) ", 1);
+			ContactData contact = new ContactData()
+				.withContactName(generateRandomContactString("Umma", 0))
+				.withSecondName(generateRandomContactString("Mila", 0))
+				.withContactAdress(generateRandomContactString("Angelina ", 0))
+				.withContactHomePhone(generateRandomContactString("8 (8422) ", 1))
+				.withContactMobilePhone(generateRandomContactString("Angelina ", 2))
+				.withContactWorkPhone(generateRandomContactString("8 (8422) ", 1))
+				.withContactEmail1(generateRandomContactString("AngelinasMail", 3))
+				.withContactEmail2(generateRandomContactString("MilasMail", 3))
+				.withContactBday("4")
+				.withContactBmonth("July")
+				.withContactByear(generateRandomContactString("", 6))
+				.withContactSecondaryAdress(generateRandomContactString("Angelina ", 0))
+				.withContactSecondaryPhone(generateRandomContactString("8 (8422) ", 1));
 			list.add(new Object[]{contact});
 		}
 		return list.iterator();
