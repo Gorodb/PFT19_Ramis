@@ -6,6 +6,7 @@ import java.util.List;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
 import com.example.tests.GroupData;
+import com.example.utils.SortedListOf;
 
 public class GroupHelper extends HelperBase {
 
@@ -13,9 +14,9 @@ public class GroupHelper extends HelperBase {
 		super(manager);
 	}
 	
-	private List<GroupData> cacheGroups;
+	private SortedListOf<GroupData> cacheGroups;
 
-	public List<GroupData> getGroups() {
+	public SortedListOf<GroupData> getGroups() {
 		if (cacheGroups == null) {
 			rebuildCache();
 		}
@@ -23,16 +24,14 @@ public class GroupHelper extends HelperBase {
 	}
 
 	private void rebuildCache() {
-		List<GroupData> cacheGroups = new ArrayList<GroupData>();
+		SortedListOf<GroupData> cacheGroups = new SortedListOf<GroupData>();
 		
 		manager.navigateTo().groupsPage();
 		List<WebElement> checkboxes = driver.findElements(By.name("selected[]"));
 		for (WebElement checkbox : checkboxes) {
-			//GroupData group = new GroupData().withName(name);
 			String title = checkbox.getAttribute("title");
 			String groupName = title.substring("select (".length(), title.length() - ")".length());
-			GroupData group = new GroupData().withName(groupName);
-			cacheGroups.add(group);
+			cacheGroups.add(new GroupData().withName(groupName));
 		}
 	}
 
@@ -57,7 +56,6 @@ public class GroupHelper extends HelperBase {
 	}
 
 	public GroupHelper deleteGroup(int index) {
-		manager.navigateTo().groupsPage();
 		selectGroupByIndex(index);
 		submitGroupDeletion();
 	    gotoGroupsPage();

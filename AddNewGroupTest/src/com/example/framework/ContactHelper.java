@@ -11,6 +11,7 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.ui.Select;
 import com.example.tests.ContactData;
+import com.example.utils.SortedListOf;
 
 public class ContactHelper extends HelperBase {
 	
@@ -21,7 +22,7 @@ public class ContactHelper extends HelperBase {
 		super(manager);
 	}
 
-	private List<ContactData> cacheContacts;
+	private SortedListOf<ContactData> cacheContacts;
 	
 	public ContactHelper createContact(ContactData contact) {
 		manager.navigateTo().mainPage();
@@ -44,7 +45,7 @@ public class ContactHelper extends HelperBase {
 
 	public ContactHelper modifyContact(int index,ContactData contact) {
 		manager.navigateTo().mainPage();
-		openContactPage(index);
+		initEditSomeContact(index);
 		contacstInfo(contact, MODIFICATION);
 		applyContactModification();
 		gotoHomePage();
@@ -80,17 +81,15 @@ public class ContactHelper extends HelperBase {
 	/****
 	 * Getting contacts list here
 	 ****/
-	public List<ContactData> getContacts() {
+	public SortedListOf<ContactData> getContacts() {
 		if (cacheContacts == null) {
 			rebuildCache();
 		}
 		return cacheContacts;
 	}
-	
-	//*****************************************************************************//
 
 	private void rebuildCache() {
-		List<ContactData> cacheContacts = new ArrayList<ContactData>();
+		SortedListOf<ContactData> cacheContacts = new SortedListOf<ContactData>();
 		
 		manager.navigateTo().mainPage();
 		List<WebElement> rows = driver.findElements(By.xpath("//tr[@name='entry']"));
@@ -102,6 +101,8 @@ public class ContactHelper extends HelperBase {
 				.withContactName(contactName));
 		}		
 	}
+	
+	//*****************************************************************************//
 
 	public void submitContactDeletion() {
 		click(By.xpath("//input[@value = 'Delete']"));
@@ -123,7 +124,7 @@ public class ContactHelper extends HelperBase {
 		return this;
 	}
 
-	public ContactHelper openContactPage(int index) {
+	public ContactHelper initEditSomeContact(int index) {
 		clickEditContact(index+1);
 		return this;
 	}

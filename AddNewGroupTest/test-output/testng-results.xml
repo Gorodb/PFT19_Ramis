@@ -2,35 +2,27 @@
 <testng-results skipped="0" failed="1" total="1" passed="0">
   <reporter-output>
   </reporter-output>
-  <suite name="Default suite" duration-ms="11586" started-at="2014-09-10T19:30:40Z" finished-at="2014-09-10T19:30:52Z">
+  <suite name="Default suite" duration-ms="13713" started-at="2014-09-13T09:26:04Z" finished-at="2014-09-13T09:26:17Z">
     <groups>
     </groups>
-    <test name="Default test" duration-ms="11586" started-at="2014-09-10T19:30:40Z" finished-at="2014-09-10T19:30:52Z">
+    <test name="Default test" duration-ms="13713" started-at="2014-09-13T09:26:04Z" finished-at="2014-09-13T09:26:17Z">
       <class name="com.example.tests.NewContact">
-        <test-method status="PASS" signature="setUp()[pri:0, instance:com.example.tests.NewContact@58c04c2b]" name="setUp" is-config="true" duration-ms="6991" started-at="2014-09-10T23:30:40Z" finished-at="2014-09-10T23:30:47Z">
+        <test-method status="PASS" signature="setUp()[pri:0, instance:com.example.tests.NewContact@36aa544]" name="setUp" is-config="true" duration-ms="7060" started-at="2014-09-13T13:26:04Z" finished-at="2014-09-13T13:26:11Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setUp -->
-        <test-method status="FAIL" signature="testNewUserCreation(com.example.tests.ContactData)[pri:0, instance:com.example.tests.NewContact@58c04c2b]" name="testNewUserCreation" duration-ms="4352" started-at="2014-09-10T23:30:47Z" data-provider="randomValidContactGenerator" finished-at="2014-09-10T23:30:51Z">
+        <test-method status="FAIL" signature="testNewUserCreation(com.example.tests.ContactData)[pri:0, instance:com.example.tests.NewContact@36aa544]" name="testNewUserCreation" duration-ms="6427" started-at="2014-09-13T13:26:11Z" data-provider="randomValidContactGenerator" finished-at="2014-09-13T13:26:17Z">
           <params>
             <param index="0">
               <value>
-                <![CDATA[ContactData [contactName=Umma1953583087, secondName=Mila526500757]]]>
+                <![CDATA[ContactData [contactName=Umma-980504295, secondName=Mila-774125910]]]>
               </value>
             </param>
           </params>
-          <exception class="java.lang.AssertionError">
-            <message>
-              <![CDATA[Lists differ at element [9]: ContactData [contactName=Umma1953583087, secondName=Mila526500757] != ContactData [contactName=Djohn, secondName=Lenon] expected [ContactData [contactName=Umma1953583087, secondName=Mila526500757]] but found [ContactData [contactName=Djohn, secondName=Lenon]]]]>
-            </message>
+          <exception class="java.lang.NullPointerException">
             <full-stacktrace>
-              <![CDATA[java.lang.AssertionError: Lists differ at element [9]: ContactData [contactName=Umma1953583087, secondName=Mila526500757] != ContactData [contactName=Djohn, secondName=Lenon] expected [ContactData [contactName=Umma1953583087, secondName=Mila526500757]] but found [ContactData [contactName=Djohn, secondName=Lenon]]
-	at org.testng.Assert.fail(Assert.java:94)
-	at org.testng.Assert.failNotEquals(Assert.java:494)
-	at org.testng.Assert.assertEquals(Assert.java:123)
-	at org.testng.Assert.assertEquals(Assert.java:549)
-	at org.testng.Assert.assertEquals(Assert.java:514)
-	at com.example.tests.NewContact.testNewUserCreation(NewContact.java:27)
+              <![CDATA[java.lang.NullPointerException
+	at com.example.tests.NewContact.testNewUserCreation(NewContact.java:26)
 	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
 	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
@@ -57,11 +49,11 @@
 	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:175)
 ]]>
             </full-stacktrace>
-          </exception> <!-- java.lang.AssertionError -->
+          </exception> <!-- java.lang.NullPointerException -->
           <reporter-output>
           </reporter-output>
         </test-method> <!-- testNewUserCreation -->
-        <test-method status="PASS" signature="tearDown()[pri:0, instance:com.example.tests.NewContact@58c04c2b]" name="tearDown" is-config="true" duration-ms="223" started-at="2014-09-10T23:30:51Z" finished-at="2014-09-10T23:30:52Z">
+        <test-method status="PASS" signature="tearDown()[pri:0, instance:com.example.tests.NewContact@36aa544]" name="tearDown" is-config="true" duration-ms="207" started-at="2014-09-13T13:26:17Z" finished-at="2014-09-13T13:26:17Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDown -->
