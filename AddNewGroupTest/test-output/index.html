@@ -23,7 +23,7 @@
     <div class="top-banner-root">
       <span class="top-banner-title-font">Test results</span>
       <br/>
-      <span class="top-banner-font-1">1 suite, 1 failed test</span>
+      <span class="top-banner-font-1">1 suite, 3 failed tests</span>
     </div> <!-- top-banner-root -->
     <div class="navigator-root">
       <div class="navigator-suite-header">
@@ -48,7 +48,7 @@
               <ul>
                 <li>
                   <a href="#" class="navigator-link " panel-name="test-xml-Default_suite">
-                    <span>C:\Users\Рамис\AppData\Local\Temp\testng-eclipse--1186681322\testng-customsuite.xml</span>
+                    <span>C:\Users\Рамис\AppData\Local\Temp\testng-eclipse-577966719\testng-customsuite.xml</span>
                   </a> <!-- navigator-link  -->
                 </li>
                 <li>
@@ -90,7 +90,7 @@
               <div class="suite-section-content">
                 <ul>
                   <li>
-                    <span class="method-stats">1 method, 1 failed,   </span>
+                    <span class="method-stats">3 methods, 3 failed,   </span>
                   </li>
                   <li>
                     <span class="method-list-title failed">Failed methods</span>
@@ -101,7 +101,17 @@
                     <div class="method-list-content failed suite-Default_suite">
                       <span>
                         <img width="3%" src="failed.png"/>
-                        <a href="#" class="method navigator-link" panel-name="suite-Default_suite" title="com.example.tests.NewContact" hash-for-method="testNewUserCreation(ContactData [contactName=Umma-980504295, secondName=Mila-774125910])">testNewUserCreation(ContactData [contactName=Umma-980504295, secondName=Mila-774125910])</a> <!-- method navigator-link -->
+                        <a href="#" class="method navigator-link" panel-name="suite-Default_suite" title="com.example.tests.NewGroup" hash-for-method="testValidDatasGroupCreation(GroupData [groupName=Umma -1063079198, header=Mila 1199224503, footer=Angelina 161419057])">testValidDatasGroupCreation(GroupData [groupName=Umma -1063079198, header=Mila 1199224503, footer=Angelina 161419057])</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img width="3%" src="failed.png"/>
+                        <a href="#" class="method navigator-link" panel-name="suite-Default_suite" title="com.example.tests.NewGroup" hash-for-method="testValidDatasGroupCreation(GroupData [groupName=, header=Mila 63392596, footer=])">testValidDatasGroupCreation(GroupData [groupName=, header=Mila 63392596, footer=])</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img width="3%" src="failed.png"/>
+                        <a href="#" class="method navigator-link" panel-name="suite-Default_suite" title="com.example.tests.NewGroup" hash-for-method="testValidDatasGroupCreation(GroupData [groupName=Umma 1779498057, header=Mila 883511356, footer=Angelina 784632480])">testValidDatasGroupCreation(GroupData [groupName=Umma 1779498057, header=Mila 883511356, footer=Angelina 784632480])</a> <!-- method navigator-link -->
                       </span>
                       <br/>
                     </div> <!-- method-list-content failed suite-Default_suite -->
@@ -119,17 +129,89 @@
           <div class="suite-Default_suite-class-failed">
             <div class="main-panel-header rounded-window-top">
               <img src="failed.png"/>
-              <span class="class-name">com.example.tests.NewContact</span>
+              <span class="class-name">com.example.tests.NewGroup</span>
             </div> <!-- main-panel-header rounded-window-top -->
             <div class="main-panel-content rounded-window-bottom">
               <div class="method">
                 <div class="method-content">
-                  <a name="testNewUserCreation(ContactData [contactName=Umma-980504295, secondName=Mila-774125910])">
-                  </a> <!-- testNewUserCreation(ContactData [contactName=Umma-980504295, secondName=Mila-774125910]) -->
-                  <span class="method-name">testNewUserCreation</span>
-                  <span class="parameters">(ContactData [contactName=Umma-980504295, secondName=Mila-774125910])</span>
+                  <a name="testValidDatasGroupCreation(GroupData [groupName=Umma -1063079198, header=Mila 1199224503, footer=Angelina 161419057])">
+                  </a> <!-- testValidDatasGroupCreation(GroupData [groupName=Umma -1063079198, header=Mila 1199224503, footer=Angelina 161419057]) -->
+                  <span class="method-name">testValidDatasGroupCreation</span>
+                  <span class="parameters">(GroupData [groupName=Umma -1063079198, header=Mila 1199224503, footer=Angelina 161419057])</span>
                   <div class="stack-trace">java.lang.NullPointerException
-	at com.example.tests.NewContact.testNewUserCreation(NewContact.java:26)
+	at com.example.tests.NewGroup.testValidDatasGroupCreation(NewGroup.java:33)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:84)
+	at org.testng.internal.Invoker.invokeMethod(Invoker.java:714)
+	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:901)
+	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:1231)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:127)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:111)
+	at org.testng.TestRunner.privateRun(TestRunner.java:767)
+	at org.testng.TestRunner.run(TestRunner.java:617)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:334)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:329)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:291)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:240)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:86)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1224)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1149)
+	at org.testng.TestNG.run(TestNG.java:1057)
+	at org.testng.remote.RemoteTestNG.run(RemoteTestNG.java:111)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:204)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:175)
+
+</div> <!-- stack-trace -->
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="testValidDatasGroupCreation(GroupData [groupName=, header=Mila 63392596, footer=])">
+                  </a> <!-- testValidDatasGroupCreation(GroupData [groupName=, header=Mila 63392596, footer=]) -->
+                  <span class="method-name">testValidDatasGroupCreation</span>
+                  <span class="parameters">(GroupData [groupName=, header=Mila 63392596, footer=])</span>
+                  <div class="stack-trace">java.lang.NullPointerException
+	at com.example.tests.NewGroup.testValidDatasGroupCreation(NewGroup.java:33)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:84)
+	at org.testng.internal.Invoker.invokeMethod(Invoker.java:714)
+	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:901)
+	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:1231)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:127)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:111)
+	at org.testng.TestRunner.privateRun(TestRunner.java:767)
+	at org.testng.TestRunner.run(TestRunner.java:617)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:334)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:329)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:291)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:240)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:86)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1224)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1149)
+	at org.testng.TestNG.run(TestNG.java:1057)
+	at org.testng.remote.RemoteTestNG.run(RemoteTestNG.java:111)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:204)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:175)
+
+</div> <!-- stack-trace -->
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="testValidDatasGroupCreation(GroupData [groupName=Umma 1779498057, header=Mila 883511356, footer=Angelina 784632480])">
+                  </a> <!-- testValidDatasGroupCreation(GroupData [groupName=Umma 1779498057, header=Mila 883511356, footer=Angelina 784632480]) -->
+                  <span class="method-name">testValidDatasGroupCreation</span>
+                  <span class="parameters">(GroupData [groupName=Umma 1779498057, header=Mila 883511356, footer=Angelina 784632480])</span>
+                  <div class="stack-trace">java.lang.NullPointerException
+	at com.example.tests.NewGroup.testValidDatasGroupCreation(NewGroup.java:33)
 	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
 	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
@@ -163,7 +245,7 @@
         </div> <!-- panel Default_suite -->
         <div panel-name="test-xml-Default_suite" class="panel">
           <div class="main-panel-header rounded-window-top">
-            <span class="header-content">C:\Users\Рамис\AppData\Local\Temp\testng-eclipse--1186681322\testng-customsuite.xml</span>
+            <span class="header-content">C:\Users\Рамис\AppData\Local\Temp\testng-eclipse-577966719\testng-customsuite.xml</span>
           </div> <!-- main-panel-header rounded-window-top -->
           <div class="main-panel-content rounded-window-bottom">
             <pre>
@@ -172,7 +254,7 @@
 &lt;suite name=&quot;Default suite&quot;&gt;
   &lt;test verbose=&quot;2&quot; name=&quot;Default test&quot;&gt;
     &lt;classes&gt;
-      &lt;class name=&quot;com.example.tests.NewContact&quot;/&gt;
+      &lt;class name=&quot;com.example.tests.NewGroup&quot;/&gt;
     &lt;/classes&gt;
   &lt;/test&gt; &lt;!-- Default test --&gt;
 &lt;/suite&gt; &lt;!-- Default suite --&gt;
@@ -212,11 +294,19 @@ data.addColumn('number', 'Number');
 data.addColumn('string', 'Method');
 data.addColumn('string', 'Class');
 data.addColumn('number', 'Time (ms)');
-data.addRows(1);
+data.addRows(3);
 data.setCell(0, 0, 0)
-data.setCell(0, 1, 'testNewUserCreation')
-data.setCell(0, 2, 'com.example.tests.NewContact')
-data.setCell(0, 3, 6427);
+data.setCell(0, 1, 'testValidDatasGroupCreation')
+data.setCell(0, 2, 'com.example.tests.NewGroup')
+data.setCell(0, 3, 2709);
+data.setCell(1, 0, 1)
+data.setCell(1, 1, 'testValidDatasGroupCreation')
+data.setCell(1, 2, 'com.example.tests.NewGroup')
+data.setCell(1, 3, 1750);
+data.setCell(2, 0, 2)
+data.setCell(2, 1, 'testValidDatasGroupCreation')
+data.setCell(2, 2, 'com.example.tests.NewGroup')
+data.setCell(2, 3, 1680);
 window.suiteTableData['Default_suite']= { tableData: data, tableDiv: 'times-div-Default_suite'}
 return data;
 }
@@ -247,7 +337,7 @@ return data;
           </div> <!-- main-panel-header rounded-window-top -->
           <div class="main-panel-content rounded-window-bottom">
             <div class="chronological-class">
-              <div class="chronological-class-name">com.example.tests.NewContact</div> <!-- chronological-class-name -->
+              <div class="chronological-class-name">com.example.tests.NewGroup</div> <!-- chronological-class-name -->
               <div class="configuration-test before">
                 <span class="method-name">setUp</span>
                 <span class="method-start">0 ms</span>
@@ -255,12 +345,24 @@ return data;
               <div class="test-method">
                 <img src="failed.png">
                 </img>
-                <span class="method-name">testNewUserCreation(ContactData [contactName=Umma-980504295, secondName=Mila-774125910])</span>
-                <span class="method-start">7071 ms</span>
+                <span class="method-name">testValidDatasGroupCreation(GroupData [groupName=Umma 1779498057, header=Mila 883511356, footer=Angelina 784632480])</span>
+                <span class="method-start">13900 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <img src="failed.png">
+                </img>
+                <span class="method-name">testValidDatasGroupCreation(GroupData [groupName=Umma -1063079198, header=Mila 1199224503, footer=Angelina 161419057])</span>
+                <span class="method-start">16612 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <img src="failed.png">
+                </img>
+                <span class="method-name">testValidDatasGroupCreation(GroupData [groupName=, header=Mila 63392596, footer=])</span>
+                <span class="method-start">18364 ms</span>
               </div> <!-- test-method -->
               <div class="configuration-test after">
                 <span class="method-name">tearDown</span>
-                <span class="method-start">13502 ms</span>
+                <span class="method-start">20047 ms</span>
               </div> <!-- configuration-test after -->
           </div> <!-- main-panel-content rounded-window-bottom -->
         </div> <!-- panel -->

@@ -3,13 +3,12 @@ package com.example.tests;
 import java.util.ArrayList;
 import java.util.Iterator;
 import java.util.List;
-import java.util.Random;
-
 import org.testng.annotations.AfterTest;
 import org.testng.annotations.BeforeTest;
 import org.testng.annotations.DataProvider;
-
 import com.example.framework.ApplicationManager;
+import static com.example.tests.GroupDataGenerator.generateRandomGroups;
+import static com.example.tests.ContactDataGenerator.generateRandomContacts;
 
 public class BaseClass {
 	
@@ -33,27 +32,15 @@ public class BaseClass {
 	
 	@DataProvider	
 	public Iterator<Object[]> randomValidGroupGenerator() {
+		return wrapGroupsForDataProvider(generateRandomGroups(5)).iterator();
+	}
+
+	public static List<Object[]> wrapGroupsForDataProvider(List<GroupData> groups) {
 		List<Object[]> list = new ArrayList<Object[]>();
-		for (int i=0; i<5; i++) {
-			GroupData group = new GroupData()
-				.withName(generateRandomString("Umma "))
-				.withHeader(generateRandomString("Mila "))
-				.wuthFooter(generateRandomString("Angelina "));
-			//group.groupName=generateRandomString("Umma ");
-			//group.header=generateRandomString("Mila ");
-			//group.footer=generateRandomString("Angelina ");
+		for (GroupData group : groups) {
 			list.add(new Object[]{group});
 		}
-		return list.iterator();
-	  }
-
-	public String generateRandomString(String name) {
-		Random rnd = new Random();
-		if (rnd.nextInt(5) == 0) {
-			return "";
-		} else {
-			return (name + rnd.nextInt());
-		}
+		return list;
 	}
 	
 	/****
@@ -62,43 +49,18 @@ public class BaseClass {
 
 	@DataProvider	
 	public Iterator<Object[]> randomValidContactGenerator() {
-		List<Object[]> list = new ArrayList<Object[]>();
-		for (int i=0; i<1; i++) {
-			ContactData contact = new ContactData()
-				.withContactName(generateRandomContactString("Umma", 0))
-				.withSecondName(generateRandomContactString("Mila", 0))
-				.withContactAdress(generateRandomContactString("Angelina ", 0))
-				.withContactHomePhone(generateRandomContactString("8 (8422) ", 1))
-				.withContactMobilePhone(generateRandomContactString("Angelina ", 2))
-				.withContactWorkPhone(generateRandomContactString("8 (8422) ", 1))
-				.withContactEmail1(generateRandomContactString("AngelinasMail", 3))
-				.withContactEmail2(generateRandomContactString("MilasMail", 3))
-				.withContactBday("4")
-				.withContactBmonth("July")
-				.withContactByear(generateRandomContactString("", 6))
-				.withContactSecondaryAdress(generateRandomContactString("Angelina ", 0))
-				.withContactSecondaryPhone(generateRandomContactString("8 (8422) ", 1));
-			list.add(new Object[]{contact});
-		}
+		List<ContactData> contacts = generateRandomContacts(1);
+		List<Object[]> list = wrapContactsForDataProviser(contacts);
 		return list.iterator();
 	  }
 
-	public String generateRandomContactString(String name, int task) {
-		Random rnd = new Random();
-		if (rnd.nextInt(10) == 0) {
-			return "";
-		} 
-		else {
-			String outData = "";
-			if (task == 0) {outData = (name + rnd.nextInt());}
-			if (task == 1) {outData = (name + rnd.nextInt(99) + "-" + rnd.nextInt(99) + "-" + rnd.nextInt(99));}
-			if (task == 2) {outData = (name + rnd.nextInt(9999999));}
-			if (task == 3) {outData = (name + "@" + rnd.nextInt() + ".com");}
-			if (task == 4) {outData = (name + (rnd.nextInt(30)+1));}
-			if (task == 5) {outData = (name);} // it could be mass in the future
-			if (task == 6) {outData = (name + rnd.nextInt(9999));}
-			return outData;
+	private List<Object[]> wrapContactsForDataProviser(
+			List<ContactData> contacts) {
+		List<Object[]> list = new ArrayList<Object[]>();
+		for (ContactData contact : contacts) {
+			list.add(new Object[]{contact});
 		}
+		return list;
 	}
 	
 }
