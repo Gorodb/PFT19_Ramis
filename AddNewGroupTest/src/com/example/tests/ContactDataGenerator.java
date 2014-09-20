@@ -1,13 +1,17 @@
 package com.example.tests;
 
+import java.io.BufferedReader;
 import java.io.File;
+import java.io.FileReader;
+import java.io.FileWriter;
+import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Random;
 
 public class ContactDataGenerator {
 
-	public static void main(String[] args) {
+	public static void main(String[] args) throws IOException {
 		if (args.length < 3) {
 			System.out.println("Please specify parameters: <amount of test data> <file> <format>");
 			return;
@@ -34,9 +38,44 @@ public class ContactDataGenerator {
 		
 	}
 
-	private static void saveContactsToCSVFile(List<ContactData> contacts, File file) {
-		// TODO Auto-generated method stub
-		
+	private static void saveContactsToCSVFile(List<ContactData> contacts, File file) throws IOException {
+		FileWriter writer = new FileWriter(file);
+		for (ContactData contact : contacts) {
+			writer.write(	contact.getContactName() + "," + contact.getSecondName() + "," + contact.getContactAdress() + "," + 
+							contact.getContactHomePhone() + "," + contact.getContactMobilePhone() + "," + contact.getContactWorkPhone() + "," + 
+							contact.getContactEmail1() + "," + contact.getContactEmail2() + "," + contact.getContactBday() + "," + 
+							contact.getContactBmonth() + "," + contact.getContactByear() + "," + contact.getContactSecondaryAdress() + "," + 
+							contact.getContactSecondaryPhone() + ",|" + "\n");
+		}
+		writer.close();
+	}
+	
+	public static List<ContactData> loadContactsFromCSVFile(File file) throws IOException {
+		List<ContactData> list = new ArrayList<ContactData>();
+		FileReader reader = new FileReader(file);
+		BufferedReader bufferedReader = new BufferedReader(reader);
+		String line = bufferedReader.readLine();
+		while (line != null) {
+			String[] part = line.split(",");
+			ContactData contact = new ContactData()
+			.withContactName(part[0])
+			.withSecondName(part[1])
+			.withContactAdress(part[2])
+			.withContactHomePhone(part[3])
+			.withContactMobilePhone(part[4])
+			.withContactWorkPhone(part[5])
+			.withContactEmail1(part[6])
+			.withContactEmail2(part[7])
+			.withContactBday(part[8])
+			.withContactBmonth(part[9])
+			.withContactByear(part[10])
+			.withContactSecondaryAdress(part[11])
+			.withContactSecondaryPhone(part[12]);
+			list.add(contact);
+			line = bufferedReader.readLine();
+		}
+		bufferedReader.close();
+		return list;
 	}
 
 	public static List<ContactData> generateRandomContacts(int amount) {

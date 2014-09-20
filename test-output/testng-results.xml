@@ -1,0 +1,131 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testng-results skipped="0" failed="0" total="10" passed="10">
+  <reporter-output>
+  </reporter-output>
+  <suite name="Default suite" duration-ms="35691" started-at="2014-09-20T06:08:02Z" finished-at="2014-09-20T06:08:37Z">
+    <groups>
+    </groups>
+    <test name="Default test" duration-ms="35691" started-at="2014-09-20T06:08:02Z" finished-at="2014-09-20T06:08:37Z">
+      <class name="com.example.tests.NewGroup">
+        <test-method status="PASS" signature="setUp()[pri:0, instance:com.example.tests.NewGroup@3a8c5214]" name="setUp" is-config="true" duration-ms="15086" started-at="2014-09-20T10:08:02Z" finished-at="2014-09-20T10:08:17Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUp -->
+        <test-method status="PASS" signature="testValidDatasGroupCreation(com.example.tests.GroupData)[pri:0, instance:com.example.tests.NewGroup@3a8c5214]" name="testValidDatasGroupCreation" duration-ms="3973" started-at="2014-09-20T10:08:17Z" data-provider="groupsFromFile" finished-at="2014-09-20T10:08:21Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[GroupData [groupName=Umma 344344468, header=Mila 193872541, footer=Angelina 450182459]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testValidDatasGroupCreation -->
+        <test-method status="PASS" signature="testValidDatasGroupCreation(com.example.tests.GroupData)[pri:0, instance:com.example.tests.NewGroup@3a8c5214]" name="testValidDatasGroupCreation" duration-ms="1500" started-at="2014-09-20T10:08:21Z" data-provider="groupsFromFile" finished-at="2014-09-20T10:08:22Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[GroupData [groupName=Umma -1347901647, header=Mila -775529912, footer=Angelina -1513056464]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testValidDatasGroupCreation -->
+        <test-method status="PASS" signature="testValidDatasGroupCreation(com.example.tests.GroupData)[pri:0, instance:com.example.tests.NewGroup@3a8c5214]" name="testValidDatasGroupCreation" duration-ms="1691" started-at="2014-09-20T10:08:22Z" data-provider="groupsFromFile" finished-at="2014-09-20T10:08:24Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[GroupData [groupName=Umma -1383594301, header=Mila -2017980655, footer=Angelina 1397710655]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testValidDatasGroupCreation -->
+        <test-method status="PASS" signature="testValidDatasGroupCreation(com.example.tests.GroupData)[pri:0, instance:com.example.tests.NewGroup@3a8c5214]" name="testValidDatasGroupCreation" duration-ms="1838" started-at="2014-09-20T10:08:24Z" data-provider="groupsFromFile" finished-at="2014-09-20T10:08:26Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[GroupData [groupName=Umma 1873795593, header=Mila -1352841345, footer=Angelina -1909944221]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testValidDatasGroupCreation -->
+        <test-method status="PASS" signature="testValidDatasGroupCreation(com.example.tests.GroupData)[pri:0, instance:com.example.tests.NewGroup@3a8c5214]" name="testValidDatasGroupCreation" duration-ms="1755" started-at="2014-09-20T10:08:26Z" data-provider="groupsFromFile" finished-at="2014-09-20T10:08:28Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[GroupData [groupName=Umma -602658879, header=, footer=]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testValidDatasGroupCreation -->
+        <test-method status="PASS" signature="testValidDatasGroupCreation(com.example.tests.GroupData)[pri:0, instance:com.example.tests.NewGroup@3a8c5214]" name="testValidDatasGroupCreation" duration-ms="1766" started-at="2014-09-20T10:08:28Z" data-provider="groupsFromFile" finished-at="2014-09-20T10:08:30Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[GroupData [groupName=Umma -968316757, header=Mila -319121583, footer=Angelina 1512860567]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testValidDatasGroupCreation -->
+        <test-method status="PASS" signature="testValidDatasGroupCreation(com.example.tests.GroupData)[pri:0, instance:com.example.tests.NewGroup@3a8c5214]" name="testValidDatasGroupCreation" duration-ms="1998" started-at="2014-09-20T10:08:30Z" data-provider="groupsFromFile" finished-at="2014-09-20T10:08:32Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[GroupData [groupName=, header=Mila 164725567, footer=Angelina -84965841]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testValidDatasGroupCreation -->
+        <test-method status="PASS" signature="testValidDatasGroupCreation(com.example.tests.GroupData)[pri:0, instance:com.example.tests.NewGroup@3a8c5214]" name="testValidDatasGroupCreation" duration-ms="1901" started-at="2014-09-20T10:08:32Z" data-provider="groupsFromFile" finished-at="2014-09-20T10:08:33Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[GroupData [groupName=Umma -738730093, header=Mila 47098424, footer=]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testValidDatasGroupCreation -->
+        <test-method status="PASS" signature="testValidDatasGroupCreation(com.example.tests.GroupData)[pri:0, instance:com.example.tests.NewGroup@3a8c5214]" name="testValidDatasGroupCreation" duration-ms="1811" started-at="2014-09-20T10:08:33Z" data-provider="groupsFromFile" finished-at="2014-09-20T10:08:35Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[GroupData [groupName=Umma -1893859148, header=Mila 500332612, footer=]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testValidDatasGroupCreation -->
+        <test-method status="PASS" signature="testValidDatasGroupCreation(com.example.tests.GroupData)[pri:0, instance:com.example.tests.NewGroup@3a8c5214]" name="testValidDatasGroupCreation" duration-ms="1994" started-at="2014-09-20T10:08:35Z" data-provider="groupsFromFile" finished-at="2014-09-20T10:08:37Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[GroupData [groupName=, header=Mila 1129376503, footer=Angelina 1038156373]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testValidDatasGroupCreation -->
+        <test-method status="PASS" signature="tearDown()[pri:0, instance:com.example.tests.NewGroup@3a8c5214]" name="tearDown" is-config="true" duration-ms="263" started-at="2014-09-20T10:08:37Z" finished-at="2014-09-20T10:08:37Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+      </class> <!-- com.example.tests.NewGroup -->
+    </test> <!-- Default test -->
+  </suite> <!-- Default suite -->
+</testng-results>

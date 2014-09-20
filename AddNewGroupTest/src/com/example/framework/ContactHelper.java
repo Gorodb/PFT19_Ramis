@@ -89,7 +89,7 @@ public class ContactHelper extends HelperBase {
 	}
 
 	private void rebuildCache() {
-		SortedListOf<ContactData> cacheContacts = new SortedListOf<ContactData>();
+		cacheContacts = new SortedListOf<ContactData>();
 		
 		manager.navigateTo().mainPage();
 		List<WebElement> rows = driver.findElements(By.xpath("//tr[@name='entry']"));

@@ -49,13 +49,10 @@ public class BaseClass {
 
 	@DataProvider	
 	public Iterator<Object[]> randomValidContactGenerator() {
-		List<ContactData> contacts = generateRandomContacts(1);
-		List<Object[]> list = wrapContactsForDataProviser(contacts);
-		return list.iterator();
-	  }
+		return wrapContactsForDataProvider(generateRandomContacts(1)).iterator();
+	}
 
-	private List<Object[]> wrapContactsForDataProviser(
-			List<ContactData> contacts) {
+	public static List<Object[]> wrapContactsForDataProvider(List<ContactData> contacts) {
 		List<Object[]> list = new ArrayList<Object[]>();
 		for (ContactData contact : contacts) {
 			list.add(new Object[]{contact});

@@ -2,27 +2,37 @@
 <testng-results skipped="0" failed="3" total="3" passed="0">
   <reporter-output>
   </reporter-output>
-  <suite name="Default suite" duration-ms="20257" started-at="2014-09-14T20:07:48Z" finished-at="2014-09-14T20:08:08Z">
+  <suite name="Default suite" duration-ms="22067" started-at="2014-09-20T09:09:51Z" finished-at="2014-09-20T09:10:13Z">
     <groups>
     </groups>
-    <test name="Default test" duration-ms="20257" started-at="2014-09-14T20:07:48Z" finished-at="2014-09-14T20:08:08Z">
-      <class name="com.example.tests.NewGroup">
-        <test-method status="PASS" signature="setUp()[pri:0, instance:com.example.tests.NewGroup@6c977c1f]" name="setUp" is-config="true" duration-ms="13882" started-at="2014-09-15T00:07:48Z" finished-at="2014-09-15T00:08:02Z">
+    <test name="Default test" duration-ms="22067" started-at="2014-09-20T09:09:51Z" finished-at="2014-09-20T09:10:13Z">
+      <class name="com.example.tests.NewContact">
+        <test-method status="PASS" signature="setUp()[pri:0, instance:com.example.tests.NewContact@2788f0f7]" name="setUp" is-config="true" duration-ms="6590" started-at="2014-09-20T13:09:51Z" finished-at="2014-09-20T13:09:58Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setUp -->
-        <test-method status="FAIL" signature="testValidDatasGroupCreation(com.example.tests.GroupData)[pri:0, instance:com.example.tests.NewGroup@6c977c1f]" name="testValidDatasGroupCreation" duration-ms="2709" started-at="2014-09-15T00:08:02Z" data-provider="groupsFromFile" finished-at="2014-09-15T00:08:04Z">
+        <test-method status="FAIL" signature="testNewUserCreation(com.example.tests.ContactData)[pri:0, instance:com.example.tests.NewContact@2788f0f7]" name="testNewUserCreation" duration-ms="6253" started-at="2014-09-20T13:09:58Z" data-provider="contactsFromFile" finished-at="2014-09-20T13:10:04Z">
           <params>
             <param index="0">
               <value>
-                <![CDATA[GroupData [groupName=Umma 1779498057, header=Mila 883511356, footer=Angelina 784632480]]]>
+                <![CDATA[ContactData [contactName=Umma-1977332619, secondName=Mila-1781166547]]]>
               </value>
             </param>
           </params>
-          <exception class="java.lang.NullPointerException">
+          <exception class="java.lang.AssertionError">
+            <message>
+              <![CDATA[
+Expected: <[ContactData [contactName=Djohn, secondName=Lenon], ContactData [contactName=Djohn, secondName=Lenon], ContactData [contactName=Djohn, secondName=Lenon], ContactData [contactName=Djohn, secondName=Lenon], ContactData [contactName=Djohn, secondName=Lenon], ContactData [contactName=Djohn, secondName=Lenon], ContactData [contactName=Djohn, secondName=Lenon], ContactData [contactName=Djohn, secondName=Lenon], ContactData [contactName=Djohn, secondName=Lenon], ContactData [contactName=Djohn, secondName=Lenon], ContactData [contactName=Djohn, secondName=Lenon], ContactData [contactName=Djohn, secondName=Lenon], ContactData [contactName=Djohn, secondName=Lenon], ContactData [contactName=Djohn, secondName=Lenon], ContactData [contactName=Djohn, secondName=Lenon], ContactData [contactName=Djohn, secondName=Lenon], ContactData [contactName=Djohn, secondName=Lenon], ContactData [contactName=Djohn, secondName=Lenon], ContactData [contactName=Djohn, secondName=Lenon], ContactData [contactName=Djohn, secondName=Lenon], ContactData [contactName=Umma-1977332619, secondName=Mila-1781166547]]]]><![CDATA[>
+     but: was <[ContactData [contactName=Djohn, secondName=Lenon], ContactData [contactName=Djohn, secondName=Lenon], ContactData [contactName=Djohn, secondName=Lenon], ContactData [contactName=Djohn, secondName=Lenon], ContactData [contactName=Djohn, secondName=Lenon], ContactData [contactName=Djohn, secondName=Lenon], ContactData [contactName=Djohn, secondName=Lenon], ContactData [contactName=Djohn, secondName=Lenon], ContactData [contactName=Djohn, secondName=Lenon], ContactData [contactName=Djohn, secondName=Lenon], ContactData [contactName=Djohn, secondName=Lenon], ContactData [contactName=Djohn, secondName=Lenon], ContactData [contactName=Djohn, secondName=Lenon], ContactData [contactName=Djohn, secondName=Lenon], ContactData [contactName=Djohn, secondName=Lenon], ContactData [contactName=Djohn, secondName=Lenon], ContactData [contactName=Djohn, secondName=Lenon], ContactData [contactName=Djohn, secondName=Lenon], ContactData [contactName=Djohn, secondName=Lenon], ContactData [contactName=Djohn, secondName=Lenon], ContactData [contactName=Djohn, secondName=Lenon]]><![CDATA[]]]]><![CDATA[>]]>
+            </message>
             <full-stacktrace>
-              <![CDATA[java.lang.NullPointerException
-	at com.example.tests.NewGroup.testValidDatasGroupCreation(NewGroup.java:33)
+              <![CDATA[java.lang.AssertionError: 
+Expected: <[ContactData [contactName=Djohn, secondName=Lenon], ContactData [contactName=Djohn, secondName=Lenon], ContactData [contactName=Djohn, secondName=Lenon], ContactData [contactName=Djohn, secondName=Lenon], ContactData [contactName=Djohn, secondName=Lenon], ContactData [contactName=Djohn, secondName=Lenon], ContactData [contactName=Djohn, secondName=Lenon], ContactData [contactName=Djohn, secondName=Lenon], ContactData [contactName=Djohn, secondName=Lenon], ContactData [contactName=Djohn, secondName=Lenon], ContactData [contactName=Djohn, secondName=Lenon], ContactData [contactName=Djohn, secondName=Lenon], ContactData [contactName=Djohn, secondName=Lenon], ContactData [contactName=Djohn, secondName=Lenon], ContactData [contactName=Djohn, secondName=Lenon], ContactData [contactName=Djohn, secondName=Lenon], ContactData [contactName=Djohn, secondName=Lenon], ContactData [contactName=Djohn, secondName=Lenon], ContactData [contactName=Djohn, secondName=Lenon], ContactData [contactName=Djohn, secondName=Lenon], ContactData [contactName=Umma-1977332619, secondName=Mila-1781166547]]]]><![CDATA[>
+     but: was <[ContactData [contactName=Djohn, secondName=Lenon], ContactData [contactName=Djohn, secondName=Lenon], ContactData [contactName=Djohn, secondName=Lenon], ContactData [contactName=Djohn, secondName=Lenon], ContactData [contactName=Djohn, secondName=Lenon], ContactData [contactName=Djohn, secondName=Lenon], ContactData [contactName=Djohn, secondName=Lenon], ContactData [contactName=Djohn, secondName=Lenon], ContactData [contactName=Djohn, secondName=Lenon], ContactData [contactName=Djohn, secondName=Lenon], ContactData [contactName=Djohn, secondName=Lenon], ContactData [contactName=Djohn, secondName=Lenon], ContactData [contactName=Djohn, secondName=Lenon], ContactData [contactName=Djohn, secondName=Lenon], ContactData [contactName=Djohn, secondName=Lenon], ContactData [contactName=Djohn, secondName=Lenon], ContactData [contactName=Djohn, secondName=Lenon], ContactData [contactName=Djohn, secondName=Lenon], ContactData [contactName=Djohn, secondName=Lenon], ContactData [contactName=Djohn, secondName=Lenon], ContactData [contactName=Djohn, secondName=Lenon]]]]><![CDATA[>
+	at org.hamcrest.MatcherAssert.assertThat(MatcherAssert.java:20)
+	at org.junit.Assert.assertThat(Assert.java:865)
+	at org.junit.Assert.assertThat(Assert.java:832)
+	at com.example.tests.NewContact.testNewUserCreation(NewContact.java:34)
 	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
 	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
@@ -49,22 +59,32 @@
 	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:175)
 ]]>
             </full-stacktrace>
-          </exception> <!-- java.lang.NullPointerException -->
+          </exception> <!-- java.lang.AssertionError -->
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- testValidDatasGroupCreation -->
-        <test-method status="FAIL" signature="testValidDatasGroupCreation(com.example.tests.GroupData)[pri:0, instance:com.example.tests.NewGroup@6c977c1f]" name="testValidDatasGroupCreation" duration-ms="1750" started-at="2014-09-15T00:08:04Z" data-provider="groupsFromFile" finished-at="2014-09-15T00:08:06Z">
+        </test-method> <!-- testNewUserCreation -->
+        <test-method status="FAIL" signature="testNewUserCreation(com.example.tests.ContactData)[pri:0, instance:com.example.tests.NewContact@2788f0f7]" name="testNewUserCreation" duration-ms="4446" started-at="2014-09-20T13:10:04Z" data-provider="contactsFromFile" finished-at="2014-09-20T13:10:08Z">
           <params>
             <param index="0">
               <value>
-                <![CDATA[GroupData [groupName=Umma -1063079198, header=Mila 1199224503, footer=Angelina 161419057]]]>
+                <![CDATA[ContactData [contactName=Umma-457511264, secondName=]]]>
               </value>
             </param>
           </params>
-          <exception class="java.lang.NullPointerException">
+          <exception class="java.lang.AssertionError">
+            <message>
+              <![CDATA[
+Expected: <[ContactData [contactName=Djohn, secondName=Lenon], ContactData [contactName=Djohn, secondName=Lenon], ContactData [contactName=Djohn, secondName=Lenon], ContactData [contactName=Djohn, secondName=Lenon], ContactData [contactName=Djohn, secondName=Lenon], ContactData [contactName=Djohn, secondName=Lenon], ContactData [contactName=Djohn, secondName=Lenon], ContactData [contactName=Djohn, secondName=Lenon], ContactData [contactName=Djohn, secondName=Lenon], ContactData [contactName=Djohn, secondName=Lenon], ContactData [contactName=Djohn, secondName=Lenon], ContactData [contactName=Djohn, secondName=Lenon], ContactData [contactName=Djohn, secondName=Lenon], ContactData [contactName=Djohn, secondName=Lenon], ContactData [contactName=Djohn, secondName=Lenon], ContactData [contactName=Djohn, secondName=Lenon], ContactData [contactName=Djohn, secondName=Lenon], ContactData [contactName=Djohn, secondName=Lenon], ContactData [contactName=Djohn, secondName=Lenon], ContactData [contactName=Djohn, secondName=Lenon], ContactData [contactName=Djohn, secondName=Lenon], ContactData [contactName=Umma-457511264, secondName=]]]]><![CDATA[>
+     but: was <[ContactData [contactName=Umma-457511264, secondName=], ContactData [contactName=Umma-457511264, secondName=], ContactData [contactName=Umma-457511264, secondName=], ContactData [contactName=Umma-457511264, secondName=], ContactData [contactName=Umma-457511264, secondName=], ContactData [contactName=Umma-457511264, secondName=], ContactData [contactName=Umma-457511264, secondName=], ContactData [contactName=Umma-457511264, secondName=], ContactData [contactName=Umma-457511264, secondName=], ContactData [contactName=Umma-457511264, secondName=], ContactData [contactName=Umma-457511264, secondName=], ContactData [contactName=Umma-457511264, secondName=], ContactData [contactName=Umma-457511264, secondName=], ContactData [contactName=Umma-457511264, secondName=], ContactData [contactName=Umma-457511264, secondName=], ContactData [contactName=Umma-457511264, secondName=], ContactData [contactName=Umma-457511264, secondName=], ContactData [contactName=Umma-457511264, secondName=], ContactData [contactName=Umma-457511264, secondName=], ContactData [contactName=Umma-457511264, secondName=], ContactData [contactName=Umma-457511264, secondName=], ContactData [contactName=Umma-457511264, secondName=]]><![CDATA[]]]]><![CDATA[>]]>
+            </message>
             <full-stacktrace>
-              <![CDATA[java.lang.NullPointerException
-	at com.example.tests.NewGroup.testValidDatasGroupCreation(NewGroup.java:33)
+              <![CDATA[java.lang.AssertionError: 
+Expected: <[ContactData [contactName=Djohn, secondName=Lenon], ContactData [contactName=Djohn, secondName=Lenon], ContactData [contactName=Djohn, secondName=Lenon], ContactData [contactName=Djohn, secondName=Lenon], ContactData [contactName=Djohn, secondName=Lenon], ContactData [contactName=Djohn, secondName=Lenon], ContactData [contactName=Djohn, secondName=Lenon], ContactData [contactName=Djohn, secondName=Lenon], ContactData [contactName=Djohn, secondName=Lenon], ContactData [contactName=Djohn, secondName=Lenon], ContactData [contactName=Djohn, secondName=Lenon], ContactData [contactName=Djohn, secondName=Lenon], ContactData [contactName=Djohn, secondName=Lenon], ContactData [contactName=Djohn, secondName=Lenon], ContactData [contactName=Djohn, secondName=Lenon], ContactData [contactName=Djohn, secondName=Lenon], ContactData [contactName=Djohn, secondName=Lenon], ContactData [contactName=Djohn, secondName=Lenon], ContactData [contactName=Djohn, secondName=Lenon], ContactData [contactName=Djohn, secondName=Lenon], ContactData [contactName=Djohn, secondName=Lenon], ContactData [contactName=Umma-457511264, secondName=]]]]><![CDATA[>
+     but: was <[ContactData [contactName=Umma-457511264, secondName=], ContactData [contactName=Umma-457511264, secondName=], ContactData [contactName=Umma-457511264, secondName=], ContactData [contactName=Umma-457511264, secondName=], ContactData [contactName=Umma-457511264, secondName=], ContactData [contactName=Umma-457511264, secondName=], ContactData [contactName=Umma-457511264, secondName=], ContactData [contactName=Umma-457511264, secondName=], ContactData [contactName=Umma-457511264, secondName=], ContactData [contactName=Umma-457511264, secondName=], ContactData [contactName=Umma-457511264, secondName=], ContactData [contactName=Umma-457511264, secondName=], ContactData [contactName=Umma-457511264, secondName=], ContactData [contactName=Umma-457511264, secondName=], ContactData [contactName=Umma-457511264, secondName=], ContactData [contactName=Umma-457511264, secondName=], ContactData [contactName=Umma-457511264, secondName=], ContactData [contactName=Umma-457511264, secondName=], ContactData [contactName=Umma-457511264, secondName=], ContactData [contactName=Umma-457511264, secondName=], ContactData [contactName=Umma-457511264, secondName=], ContactData [contactName=Umma-457511264, secondName=]]]]><![CDATA[>
+	at org.hamcrest.MatcherAssert.assertThat(MatcherAssert.java:20)
+	at org.junit.Assert.assertThat(Assert.java:865)
+	at org.junit.Assert.assertThat(Assert.java:832)
+	at com.example.tests.NewContact.testNewUserCreation(NewContact.java:34)
 	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
 	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
@@ -91,22 +111,32 @@
 	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:175)
 ]]>
             </full-stacktrace>
-          </exception> <!-- java.lang.NullPointerException -->
+          </exception> <!-- java.lang.AssertionError -->
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- testValidDatasGroupCreation -->
-        <test-method status="FAIL" signature="testValidDatasGroupCreation(com.example.tests.GroupData)[pri:0, instance:com.example.tests.NewGroup@6c977c1f]" name="testValidDatasGroupCreation" duration-ms="1680" started-at="2014-09-15T00:08:06Z" data-provider="groupsFromFile" finished-at="2014-09-15T00:08:08Z">
+        </test-method> <!-- testNewUserCreation -->
+        <test-method status="FAIL" signature="testNewUserCreation(com.example.tests.ContactData)[pri:0, instance:com.example.tests.NewContact@2788f0f7]" name="testNewUserCreation" duration-ms="4494" started-at="2014-09-20T13:10:08Z" data-provider="contactsFromFile" finished-at="2014-09-20T13:10:13Z">
           <params>
             <param index="0">
               <value>
-                <![CDATA[GroupData [groupName=, header=Mila 63392596, footer=]]]>
+                <![CDATA[ContactData [contactName=, secondName=Mila302099797]]]>
               </value>
             </param>
           </params>
-          <exception class="java.lang.NullPointerException">
+          <exception class="java.lang.AssertionError">
+            <message>
+              <![CDATA[
+Expected: <[ContactData [contactName=, secondName=Mila302099797], ContactData [contactName=Umma-457511264, secondName=], ContactData [contactName=Umma-457511264, secondName=], ContactData [contactName=Umma-457511264, secondName=], ContactData [contactName=Umma-457511264, secondName=], ContactData [contactName=Umma-457511264, secondName=], ContactData [contactName=Umma-457511264, secondName=], ContactData [contactName=Umma-457511264, secondName=], ContactData [contactName=Umma-457511264, secondName=], ContactData [contactName=Umma-457511264, secondName=], ContactData [contactName=Umma-457511264, secondName=], ContactData [contactName=Umma-457511264, secondName=], ContactData [contactName=Umma-457511264, secondName=], ContactData [contactName=Umma-457511264, secondName=], ContactData [contactName=Umma-457511264, secondName=], ContactData [contactName=Umma-457511264, secondName=], ContactData [contactName=Umma-457511264, secondName=], ContactData [contactName=Umma-457511264, secondName=], ContactData [contactName=Umma-457511264, secondName=], ContactData [contactName=Umma-457511264, secondName=], ContactData [contactName=Umma-457511264, secondName=], ContactData [contactName=Umma-457511264, secondName=], ContactData [contactName=Umma-457511264, secondName=]]]]><![CDATA[>
+     but: was <[ContactData [contactName=Umma-457511264, secondName=], ContactData [contactName=Umma-457511264, secondName=], ContactData [contactName=Umma-457511264, secondName=], ContactData [contactName=Umma-457511264, secondName=], ContactData [contactName=Umma-457511264, secondName=], ContactData [contactName=Umma-457511264, secondName=], ContactData [contactName=Umma-457511264, secondName=], ContactData [contactName=Umma-457511264, secondName=], ContactData [contactName=Umma-457511264, secondName=], ContactData [contactName=Umma-457511264, secondName=], ContactData [contactName=Umma-457511264, secondName=], ContactData [contactName=Umma-457511264, secondName=], ContactData [contactName=Umma-457511264, secondName=], ContactData [contactName=Umma-457511264, secondName=], ContactData [contactName=Umma-457511264, secondName=], ContactData [contactName=Umma-457511264, secondName=], ContactData [contactName=Umma-457511264, secondName=], ContactData [contactName=Umma-457511264, secondName=], ContactData [contactName=Umma-457511264, secondName=], ContactData [contactName=Umma-457511264, secondName=], ContactData [contactName=Umma-457511264, secondName=], ContactData [contactName=Umma-457511264, secondName=], ContactData [contactName=Umma-457511264, secondName=]]><![CDATA[]]]]><![CDATA[>]]>
+            </message>
             <full-stacktrace>
-              <![CDATA[java.lang.NullPointerException
-	at com.example.tests.NewGroup.testValidDatasGroupCreation(NewGroup.java:33)
+              <![CDATA[java.lang.AssertionError: 
+Expected: <[ContactData [contactName=, secondName=Mila302099797], ContactData [contactName=Umma-457511264, secondName=], ContactData [contactName=Umma-457511264, secondName=], ContactData [contactName=Umma-457511264, secondName=], ContactData [contactName=Umma-457511264, secondName=], ContactData [contactName=Umma-457511264, secondName=], ContactData [contactName=Umma-457511264, secondName=], ContactData [contactName=Umma-457511264, secondName=], ContactData [contactName=Umma-457511264, secondName=], ContactData [contactName=Umma-457511264, secondName=], ContactData [contactName=Umma-457511264, secondName=], ContactData [contactName=Umma-457511264, secondName=], ContactData [contactName=Umma-457511264, secondName=], ContactData [contactName=Umma-457511264, secondName=], ContactData [contactName=Umma-457511264, secondName=], ContactData [contactName=Umma-457511264, secondName=], ContactData [contactName=Umma-457511264, secondName=], ContactData [contactName=Umma-457511264, secondName=], ContactData [contactName=Umma-457511264, secondName=], ContactData [contactName=Umma-457511264, secondName=], ContactData [contactName=Umma-457511264, secondName=], ContactData [contactName=Umma-457511264, secondName=], ContactData [contactName=Umma-457511264, secondName=]]]]><![CDATA[>
+     but: was <[ContactData [contactName=Umma-457511264, secondName=], ContactData [contactName=Umma-457511264, secondName=], ContactData [contactName=Umma-457511264, secondName=], ContactData [contactName=Umma-457511264, secondName=], ContactData [contactName=Umma-457511264, secondName=], ContactData [contactName=Umma-457511264, secondName=], ContactData [contactName=Umma-457511264, secondName=], ContactData [contactName=Umma-457511264, secondName=], ContactData [contactName=Umma-457511264, secondName=], ContactData [contactName=Umma-457511264, secondName=], ContactData [contactName=Umma-457511264, secondName=], ContactData [contactName=Umma-457511264, secondName=], ContactData [contactName=Umma-457511264, secondName=], ContactData [contactName=Umma-457511264, secondName=], ContactData [contactName=Umma-457511264, secondName=], ContactData [contactName=Umma-457511264, secondName=], ContactData [contactName=Umma-457511264, secondName=], ContactData [contactName=Umma-457511264, secondName=], ContactData [contactName=Umma-457511264, secondName=], ContactData [contactName=Umma-457511264, secondName=], ContactData [contactName=Umma-457511264, secondName=], ContactData [contactName=Umma-457511264, secondName=], ContactData [contactName=Umma-457511264, secondName=]]]]><![CDATA[>
+	at org.hamcrest.MatcherAssert.assertThat(MatcherAssert.java:20)
+	at org.junit.Assert.assertThat(Assert.java:865)
+	at org.junit.Assert.assertThat(Assert.java:832)
+	at com.example.tests.NewContact.testNewUserCreation(NewContact.java:34)
 	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
 	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
@@ -133,15 +163,15 @@
 	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:175)
 ]]>
             </full-stacktrace>
-          </exception> <!-- java.lang.NullPointerException -->
+          </exception> <!-- java.lang.AssertionError -->
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- testValidDatasGroupCreation -->
-        <test-method status="PASS" signature="tearDown()[pri:0, instance:com.example.tests.NewGroup@6c977c1f]" name="tearDown" is-config="true" duration-ms="207" started-at="2014-09-15T00:08:08Z" finished-at="2014-09-15T00:08:08Z">
+        </test-method> <!-- testNewUserCreation -->
+        <test-method status="PASS" signature="tearDown()[pri:0, instance:com.example.tests.NewContact@2788f0f7]" name="tearDown" is-config="true" duration-ms="262" started-at="2014-09-20T13:10:13Z" finished-at="2014-09-20T13:10:13Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDown -->
-      </class> <!-- com.example.tests.NewGroup -->
+      </class> <!-- com.example.tests.NewContact -->
     </test> <!-- Default test -->
   </suite> <!-- Default suite -->
 </testng-results>
