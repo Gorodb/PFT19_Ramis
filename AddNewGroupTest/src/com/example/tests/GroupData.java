@@ -5,12 +5,7 @@ public class GroupData implements Comparable<GroupData> {
 	private String header;
 	private String footer;
 	public String name;
-
-	public GroupData(String groupName, String header, String footer) {
-		this.groupName = groupName;
-		this.header = header;
-		this.footer = footer;
-	}
+	
 	public GroupData() {
 		this.groupName = groupName;
 		this.header = header;

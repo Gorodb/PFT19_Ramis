@@ -1,7 +1,5 @@
 package com.example.tests;
 
-import static org.testng.Assert.assertEquals;
-import java.util.Collections;
 import java.util.Random;
 import org.testng.annotations.Test;
 import com.example.utils.SortedListOf;

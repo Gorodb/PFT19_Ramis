@@ -1,1 +1,0 @@
-java -cp bin;D:\testing\PFT19_Ramis\xstream-1.4.7\lib\xstream-1.4.7.jar;D:\testing\PFT19_Ramis\xstream-1.4.7\lib\xstream\xpp3_min-1.1.4c.jar;D:\testing\PFT19_Ramis\xstream-1.4.7\lib\xstream\xmlpull-1.1.3.1.jar;D:\testing\PFT19_Ramis\selenium-server-standalone-2.42.2.jar org.testng.TestNG testng-customsuite.xml

@@ -1,7 +1,5 @@
 package com.example.framework;
 
-import javax.print.DocFlavor.BYTE_ARRAY;
-
 import org.openqa.selenium.By;
 
 public class NavigationHelper extends HelperBase {

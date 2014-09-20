@@ -1,10 +1,8 @@
 package com.example.tests;
 
-import static com.example.tests.GroupDataGenerator.loadGroupsFromCSVFile;
 import static com.example.tests.GroupDataGenerator.loadGroupsFromXMLFile;
 import static org.junit.Assert.assertThat;
 import static org.hamcrest.Matchers.*;
-
 import java.io.File;
 import java.io.IOException;
 import java.util.Iterator;

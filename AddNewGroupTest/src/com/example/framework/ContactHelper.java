@@ -1,15 +1,8 @@
 package com.example.framework;
 
-import static com.example.framework.ContactHelper.CREATION;
-import static com.example.framework.ContactHelper.MODIFICATION;
-
-import java.util.ArrayList;
 import java.util.List;
-import java.util.Iterator;
-import javax.xml.xpath.XPath;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
-import org.openqa.selenium.support.ui.Select;
 import com.example.tests.ContactData;
 import com.example.utils.SortedListOf;
 

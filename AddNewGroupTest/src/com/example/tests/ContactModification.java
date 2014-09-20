@@ -2,15 +2,9 @@ package com.example.tests;
 
 import static org.hamcrest.Matchers.*;
 import static org.junit.Assert.assertThat;
-import static org.testng.Assert.assertEquals;
-import java.util.Collections;
-import java.util.List;
 import java.util.Random;
 import org.testng.annotations.Test;
-
 import com.example.utils.SortedListOf;
-
-import static com.example.framework.ContactHelper.MODIFICATION;
 
 public class ContactModification extends BaseClass {
 	

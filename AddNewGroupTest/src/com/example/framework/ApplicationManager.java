@@ -1,9 +1,12 @@
 package com.example.framework;
 
 import static org.testng.Assert.fail;
+
+import java.util.Properties;
 import java.util.concurrent.TimeUnit;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
+import org.openqa.selenium.ie.InternetExplorerDriver;
 
 public class ApplicationManager {
 	
@@ -14,15 +17,24 @@ public class ApplicationManager {
 	public WebDriver driver;
 	public String baseUrl;
 	private StringBuffer verificationErrors = new StringBuffer();
+	private Properties properties;
 	
 	//before class
-	public ApplicationManager() {
-		driver = new FirefoxDriver();
-	    baseUrl = "http://localhost/";
+	public ApplicationManager(Properties properties) {
+		this.properties = properties;
+		String browser = properties.getProperty("browser");
+		if ("firefox".equals(browser)) {
+			driver = new FirefoxDriver();
+		} else if ("ie".equals(browser)) {
+			driver = new InternetExplorerDriver();
+		} else {
+			throw new Error("Unsupported browser:" + browser + ", or incorrect browser name.");
+		}
+	    baseUrl = properties.getProperty("baseUrl");
 	    driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
 	    //groupHelper = new GroupHelper(this);
 	    //contactHelper = new ContactHelper(this);
-	    driver.get(baseUrl + "/addressbookv4.1.4/");
+	    driver.get(baseUrl);
 	}
 	
 	//after class

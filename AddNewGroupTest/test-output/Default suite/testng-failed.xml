@@ -6,10 +6,14 @@
       <class name="com.example.tests.NewContact">
         <methods>
           <include name="setUp"/>
-          <include name="testNewUserCreation" invocation-numbers="0 1 2"/>
-          <include name="tearDown"/>
+          <include name="testNewUserCreation"/>
         </methods>
       </class> <!-- com.example.tests.NewContact -->
+      <class name="com.example.tests.NewGroup">
+        <methods>
+          <include name="testValidDatasGroupCreation"/>
+        </methods>
+      </class> <!-- com.example.tests.NewGroup -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->
