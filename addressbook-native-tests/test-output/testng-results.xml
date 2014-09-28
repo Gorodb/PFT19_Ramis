@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testng-results skipped="0" failed="1" total="1" passed="0">
+  <reporter-output>
+  </reporter-output>
+  <suite name="Default suite" duration-ms="100" started-at="2014-09-28T09:21:10Z" finished-at="2014-09-28T09:21:10Z">
+    <groups>
+    </groups>
+    <test name="Default test" duration-ms="100" started-at="2014-09-28T09:21:10Z" finished-at="2014-09-28T09:21:10Z">
+      <class name="com.example.tests.TestContactCreation">
+        <test-method status="PASS" signature="setUp(java.lang.String)[pri:0, instance:com.example.tests.TestContactCreation@27e33378]" name="setUp" is-config="true" duration-ms="33" started-at="2014-09-28T13:21:10Z" finished-at="2014-09-28T13:21:10Z">
+          <params>
+            <param index="0">
+              <value is-null="true"/>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUp -->
+        <test-method status="FAIL" signature="shouldCreateContactWithValidData()[pri:0, instance:com.example.tests.TestContactCreation@27e33378]" name="shouldCreateContactWithValidData" duration-ms="52" started-at="2014-09-28T13:21:10Z" finished-at="2014-09-28T13:21:10Z">
+          <exception class="com.jacob.com.ComFailException">
+            <message>
+              <![CDATA[Can't get object clsid from progid]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[com.jacob.com.ComFailException: Can't get object clsid from progid
+	at com.jacob.com.Dispatch.createInstanceNative(Native Method)
+	at com.jacob.com.Dispatch.<init>(Dispatch.java:99)
+	at com.jacob.activeX.ActiveXComponent.<init>(ActiveXComponent.java:58)
+	at autoitx4java.AutoItX.<init>(AutoItX.java:181)
+	at com.example.framework.AutoItHelper.<init>(AutoItHelper.java:20)
+	at com.example.framework.ApplicationManager.getAutoItHelper(ApplicationManager.java:63)
+	at com.example.framework.ContactHelper.initContactCreation(ContactHelper.java:16)
+	at com.example.framework.ContactHelper.createContact(ContactHelper.java:10)
+	at com.example.tests.TestContactCreation.shouldCreateContactWithValidData(TestContactCreation.java:13)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:84)
+	at org.testng.internal.Invoker.invokeMethod(Invoker.java:714)
+	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:901)
+	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:1231)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:127)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:111)
+	at org.testng.TestRunner.privateRun(TestRunner.java:767)
+	at org.testng.TestRunner.run(TestRunner.java:617)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:334)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:329)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:291)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:240)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:86)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1224)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1149)
+	at org.testng.TestNG.run(TestNG.java:1057)
+	at org.testng.remote.RemoteTestNG.run(RemoteTestNG.java:111)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:204)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:175)
+]]>
+            </full-stacktrace>
+          </exception> <!-- com.jacob.com.ComFailException -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- shouldCreateContactWithValidData -->
+      </class> <!-- com.example.tests.TestContactCreation -->
+    </test> <!-- Default test -->
+  </suite> <!-- Default suite -->
+</testng-results>
