@@ -20,16 +20,24 @@ public Iterator<Object[]> groupsFromFile() throws IOException {
 @Test(dataProvider = "groupsFromFile")
   public void testValidDatasGroupCreation(GroupData group) throws Exception {
     //save old state
-	SortedListOf<GroupData> oldList = new SortedListOf<GroupData>(app.getHibernateHelper().listGroups());
+	SortedListOf<GroupData> oldList = app.getModel().getGroups();
     
     //action
     app.getGroupHelper().createGroup(group);
     
     //save new state
-    SortedListOf<GroupData> newList = new SortedListOf<GroupData>(app.getHibernateHelper().listGroups());
+    SortedListOf<GroupData> newList = app.getModel().getGroups();
     
     //compase states
     assertThat(newList, equalTo(oldList.withAdded(group)));
+    //if (wantToCheck()) {
+        if ("yes".equals(app.getProperty("check.db"))) {
+            assertThat(app.getModel().getGroups(), equalTo(app.getHibernateHelper().listGroups()));	
+        }
+        if ("yes".equals(app.getProperty("check.ui"))) {
+            assertThat(app.getModel().getGroups(), equalTo(app.getGroupHelper().getUiGroups()));   
+        }
+    //}
   }	  
   
 }

@@ -23,7 +23,6 @@ public class ContactHelper extends WebDriverHelperBase {
 		contacstInfo(contact, CREATION);
 		createNewContact();
 		gotoHomePage();
-		rebuildCache();
 		return this;
 	}
 	
@@ -32,7 +31,6 @@ public class ContactHelper extends WebDriverHelperBase {
 		clickEditContact(index+1);
 		submitContactDeletion();
 		manager.navigateTo().gotoHomePage();
-		rebuildCache();
 		return this;
 	}
 
@@ -42,7 +40,6 @@ public class ContactHelper extends WebDriverHelperBase {
 		contacstInfo(contact, MODIFICATION);
 		applyContactModification();
 		gotoHomePage();
-		rebuildCache();
 		return this;
 	}
 
@@ -74,15 +71,9 @@ public class ContactHelper extends WebDriverHelperBase {
 	/****
 	 * Getting contacts list here
 	 ****/
-	public SortedListOf<ContactData> getContacts() {
-		if (cacheContacts == null) {
-			rebuildCache();
-		}
-		return cacheContacts;
-	}
 
-	private void rebuildCache() {
-		cacheContacts = new SortedListOf<ContactData>();
+	public SortedListOf<ContactData> getUiContacts() {
+		SortedListOf<ContactData> contacts = new SortedListOf<ContactData>();
 		
 		manager.navigateTo().mainPage();
 		List<WebElement> rows = driver.findElements(By.xpath("//tr[@name='entry']"));
@@ -92,7 +83,8 @@ public class ContactHelper extends WebDriverHelperBase {
 			cacheContacts.add(new ContactData()
 				.withSecondName(secondName)
 				.withContactName(contactName));
-		}		
+		}
+		return contacts;
 	}
 	
 	//*****************************************************************************//
@@ -103,7 +95,6 @@ public class ContactHelper extends WebDriverHelperBase {
 	
 	private ContactHelper clickEditContact(int index) {
 		click(By.xpath("//table[@id='maintable']//tr[" + (index+1) + "]//a/img[@title='Edit']"));
-		cacheContacts = null;
 		return this;
 	}
 
@@ -124,13 +115,11 @@ public class ContactHelper extends WebDriverHelperBase {
 
 	public ContactHelper createNewContact() {
 		click(By.name("submit"));
-		cacheContacts = null;
 		return this;
 	}
 
 	public ContactHelper addNewUserClick() {
 		click(By.linkText("add new"));
-		cacheContacts = null;
 		return this;
 	}
 

@@ -3,7 +3,6 @@ package com.example.framework;
 import static org.testng.Assert.fail;
 
 import java.util.Properties;
-import java.util.concurrent.TimeUnit;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
 import org.openqa.selenium.ie.InternetExplorerDriver;
@@ -13,7 +12,7 @@ public class ApplicationManager {
 	private NavigationHelper navigationHelper;
 	private GroupHelper groupHelper;
 	private ContactHelper contactHelper;
-	
+	private ApplicationModel model;
 	private WebDriver driver;
 	public String baseUrl;
 	private StringBuffer verificationErrors = new StringBuffer();
@@ -23,6 +22,9 @@ public class ApplicationManager {
 	//before class
 	public ApplicationManager(Properties properties) {
 		this.properties = properties;
+		model = new ApplicationModel();
+		model.setGroups(getHibernateHelper().listGroups());
+		model.setContacts(getHibernateHelper().listContacts());
 	}
 	
 	//after class
@@ -32,6 +34,10 @@ public class ApplicationManager {
 	    if (!"".equals(verificationErrorString)) {
 	      fail(verificationErrorString);
 	    }
+	}
+	
+	public ApplicationModel getModel() {
+		return model;
 	}
 
 	public NavigationHelper navigateTo(){
@@ -77,6 +83,10 @@ public class ApplicationManager {
 		    driver.get(baseUrl);
 		}
 		return driver;
+	}
+	
+	public String getProperty(String key) {
+		return properties.getProperty(key);
 	}
 	
 }

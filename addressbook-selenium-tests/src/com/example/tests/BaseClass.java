@@ -19,6 +19,10 @@ public class BaseClass {
 	protected static String groupSelectedData;
 	
 	protected static ApplicationManager app;
+
+	private int checkFrequency;
+
+	private int checkCounter;
 	
 	@BeforeTest
 	public void setUp() throws Exception {
@@ -26,7 +30,20 @@ public class BaseClass {
 		Properties properties = new Properties();
 		properties.load(new FileReader(new File(configFile)));
 	    app = new ApplicationManager(properties);
+	    //checkCounter = 0;
+	    //checkFrequency = Integer.parseInt(properties.getProperty("check.frequency", "0"));
 	  }
+	
+	protected boolean wantToCheck() {
+		checkCounter++;
+		if (checkCounter > checkFrequency) {
+			checkCounter = 0;
+			return true;
+		}
+		else {
+			return false;
+		}
+	}
 
 	@AfterTest
 	public void tearDown() throws Exception {

@@ -11,7 +11,7 @@ public class ContactModification extends BaseClass {
 	@Test
 	public void modifySomeContact(ContactData contact) {
 		//get contacts
-		SortedListOf<ContactData> oldContactsList = app.getContactHelper().getContacts();
+		SortedListOf<ContactData> oldContactsList = app.getContactHelper().getUiContacts();
 
 	    Random rnd = new Random();
 	    int index = rnd.nextInt(oldContactsList.size()-1);
@@ -20,7 +20,7 @@ public class ContactModification extends BaseClass {
 	    app.getContactHelper().modifyContact(index, contact);
 		
 		//save new contacts at list
-	    SortedListOf<ContactData> newContactsList = app.getContactHelper().getContacts();
+	    SortedListOf<ContactData> newContactsList = app.getContactHelper().getUiContacts();
 		
 		//asserts
 		assertThat(newContactsList, equalTo(oldContactsList.without(index).withAdded(contact)));

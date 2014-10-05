@@ -3,6 +3,7 @@ package com.example.tests;
 import static com.example.tests.ContactDataGenerator.loadContactsFromCSVFile;
 import static org.junit.Assert.assertThat;
 import static org.hamcrest.Matchers.*;
+
 import java.io.File;
 import java.io.IOException;
 import java.util.Iterator;
@@ -20,16 +21,24 @@ public Iterator<Object[]> contactsFromFile() throws IOException {
   @Test(dataProvider = "contactsFromFile")
   public void testNewUserCreation(ContactData contact) throws Exception {
 	//get contacts
-	  SortedListOf<ContactData> oldContactsList = new SortedListOf<ContactData>(app.getHibernateHelper().listContacts()); //app.getContactHelper().getContacts();
+	  SortedListOf<ContactData> oldContactsList = app.getModel().getContacts(); 
 	
 	//action
 	app.getContactHelper().createContact(contact);
 	
 	//save new contacts at list
-	SortedListOf<ContactData> newContactsList = new SortedListOf<ContactData>(app.getHibernateHelper().listContacts()); // app.getContactHelper().getContacts();
+	SortedListOf<ContactData> newContactsList = app.getModel().getContacts(); 
 	
 	//asserts
 	assertThat(newContactsList, equalTo(oldContactsList.withAdded(contact)));
+    //if (wantToCheck()) {
+        if ("yes".equals(app.getProperty("check.db"))) {
+            assertThat(app.getModel().getContacts(), equalTo(app.getHibernateHelper().listContacts()));	
+        }
+        if ("yes".equals(app.getProperty("check.ui"))) {
+            assertThat(app.getModel().getContacts(), equalTo(app.getContactHelper().getUiContacts()));   
+        }
+    //}
   }
 
 }
